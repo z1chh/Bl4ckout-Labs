@@ -1,0 +1,6 @@
+# Python
+.pyc
+__pycache__/
+
+# Confs
+env_vars.json
