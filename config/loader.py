@@ -1,6 +1,10 @@
 import json
 
 class ConfigSchema:
+    # Frontend
+    # Empty for now
+    
+    # Backend
     MODELS_FOLDER = 'models_folder'
 
 def load_config():
@@ -8,6 +12,7 @@ def load_config():
     Loads the configuration file for the project
     '''
     
+    # Setup
     with open('config/env_vars.json') as f:
         env_vars = json.load(f)
         project_path = env_vars['project_path']
@@ -22,6 +27,10 @@ def load_config():
 
     root_path = config['project_root_folder'] + '/'
 
+    # Frontend
+    # Empty for now
+
+    # Backend
     for key in [
         ConfigSchema.MODELS_FOLDER,
     ]:
