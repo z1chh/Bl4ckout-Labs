@@ -19,6 +19,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 100; /* Higher than the video */
+    background: linear-gradient(to bottom, rgb(29, 29, 29) 0%, rgba(0, 0, 0, 0) 100%);
     background-color: transparent; /* Already set, just reiterating */
 }
 
