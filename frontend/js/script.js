@@ -52,7 +52,7 @@ window.addEventListener('load', function() {
     }, 1200);
 });
 
-// Video plays as soon as page is in view port
+// Video plays as soon as page is in view port for Main Video in index.html
 document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById('videoFullScreen');
 
@@ -86,4 +86,30 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener('resize', checkIfVideoInView);
 });
 
-  
+// Mute button
+document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('videoFullScreen');
+    var muteButton = document.getElementById('muteButton');
+    var volumeOffIcon = document.getElementById('volumeOffIcon'); // Volume Off SVG
+    var volumeOnIcon = document.getElementById('volumeOnIcon'); // Volume On SVG
+
+    // Set the initial state based on video's default muted state
+    updateIcon();
+
+    muteButton.addEventListener('click', function() {
+        video.muted = !video.muted; // Toggle the video's muted state
+        updateIcon(); // Update the icon based on the new muted state
+    });
+
+    function updateIcon() {
+        if (video.muted) {
+            volumeOffIcon.style.display = "block";
+            volumeOnIcon.style.display = "none";
+        } else {
+            volumeOnIcon.style.display = "block";
+            volumeOffIcon.style.display = "none";
+        }
+    }
+});
+
+
