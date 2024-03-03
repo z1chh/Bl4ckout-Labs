@@ -13,18 +13,15 @@ body {
     align-items: center;
 }
 
+/* Nav Bar CSS */
 nav {
-    position: fixed; /* or absolute */
+    position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 100; /* Higher than the video */
+    z-index: 100;
     background: linear-gradient(to bottom, rgb(29, 29, 29) 0%, rgba(0, 0, 0, 0) 100%);
-    background-color: transparent; /* Already set, just reiterating */
-}
-
-.navbar {
-    /* Do not delete */
+    background-color: transparent;
 }
 
 nav ul {
@@ -40,9 +37,14 @@ nav li {
     color: #f8f8f8;
 }
 
+nav li:not(:first-child):hover {
+    background-color: #f8f8f8;
+    transition: all 0.3s ease-in-out;
+}
+
 nav li a:hover {
     color: #000000;
-    background-color: #f8f8f8;
+    transition: all 0.3s ease-in-out
 }
 
 nav a {
@@ -54,7 +56,7 @@ nav a {
     color: #f8f8f8;
 }
 
-#ok {
+#mainnav {
     display: flex;
     justify-content: center;
     position: relative;
@@ -68,12 +70,6 @@ nav a {
   
 .invisible-spacer {
     visibility: hidden;
-}
-  
-.logo {
-    text-align: center;
-    max-width: 40px; 
-    max-height: 40px;
 }
 
 .sidebar {
@@ -100,12 +96,68 @@ nav a {
     width: 100%;
 }
 
+#text1, #text2, #text3, #text4, #text5, #text6 {
+    transition: opacity 0.5s ease, transform 2.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+.title1 {
+    background-color: rgb(19,19,19);
+    height: 200px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px;
+}
+  
+.left {
+    margin-right: auto;
+}
+  
+.right {
+    display: flex;
+}
+
+.responsive-padding-title1 {
+    padding-top: 40%;
+}
+  
+.right > div {
+    margin: 5px;
+}
+  
+@media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .right {
+      flex-direction: column;
+      justify-content: flex-start; 
+      width: 100%;
+    }
+    .responsive-padding-title1 {
+        padding-top: 20%;
+    }
+}  
+  
+
 @media(max-width: 800px) {
     .menu-icon {
         display: block;
     }
     .sidebar {
         width: 40%;
+    }
+    .responsive-padding-title1 {
+        padding-top: 25%;
     }
 }
 
@@ -133,16 +185,8 @@ nav a {
     }
 }
 
-.newsletter {
-    font-size: 15px;
-    text-align: center;
-    background-color: #2e2e2e;
-    padding: 20px;
-}
-
-.newsletter a {
-    text-decoration: none;
-    color: white;
+#videoElement {
+    width: 100%;
 }
 
 .introduction {
@@ -152,11 +196,13 @@ nav a {
 
 #contentContainer {
     position: relative;
+    justify-content: center;
 }
 
 .fade-in-image {
     opacity: 0;
     transition: opacity 2s ease-in-out;
+    justify-content: center;
 }
 
 .fade-in-image {
@@ -283,6 +329,7 @@ nav a {
     text-align: center;
 }
 
+/* Scroll down Animation */
 .scroll-down-animation {
     animation: slightJump 2s infinite;
     display: inline-block;
@@ -293,6 +340,7 @@ nav a {
     50% { transform: translateY(-10px); }
 }
 
+/* Footer CSS */
 .footer {
     background:#000;
     padding:30px 0px;
@@ -346,3 +394,4 @@ nav a {
     margin:0% 3%;
     }
 }
+ 

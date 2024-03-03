@@ -56,15 +56,12 @@ window.addEventListener('load', function() {
 document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById('videoFullScreen');
 
-    // Essayez de jouer la vidéo au chargement
     function playVideoOnLoad() {
         video.play().catch(error => {
-            // La lecture automatique n'a pas fonctionné
             console.log("La lecture automatique a échoué", error);
         });
     }
 
-    // Fonction pour vérifier si la vidéo est dans le viewport
     function checkIfVideoInView() {
         var videoPosition = video.getBoundingClientRect();
         if (videoPosition.top >= 0 && videoPosition.bottom <= window.innerHeight && !video.played.length) {
@@ -72,7 +69,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Interaction manuelle pour jouer/pauser la vidéo
     video.addEventListener('click', function() {
         if (video.paused) {
             video.play();
@@ -81,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    playVideoOnLoad(); // Essayez de jouer la vidéo au chargement
+    playVideoOnLoad();
     window.addEventListener('scroll', checkIfVideoInView);
     window.addEventListener('resize', checkIfVideoInView);
 });
@@ -90,15 +86,14 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener('DOMContentLoaded', function() {
     var video = document.getElementById('videoFullScreen');
     var muteButton = document.getElementById('muteButton');
-    var volumeOffIcon = document.getElementById('volumeOffIcon'); // Volume Off SVG
-    var volumeOnIcon = document.getElementById('volumeOnIcon'); // Volume On SVG
+    var volumeOffIcon = document.getElementById('volumeOffIcon');
+    var volumeOnIcon = document.getElementById('volumeOnIcon');
 
-    // Set the initial state based on video's default muted state
     updateIcon();
 
     muteButton.addEventListener('click', function() {
-        video.muted = !video.muted; // Toggle the video's muted state
-        updateIcon(); // Update the icon based on the new muted state
+        video.muted = !video.muted;
+        updateIcon(); 
     });
 
     function updateIcon() {
@@ -113,3 +108,58 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Video starts playing when in viewport
+document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById('videoElement');
+  
+    var checkVideoVisibility = function() {
+      var videoPosition = video.getBoundingClientRect();
+
+      var videoPartiallyVisible = videoPosition.bottom > 0 && videoPosition.top < window.innerHeight;
+  
+      if (videoPartiallyVisible) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    };
+  
+    window.addEventListener('scroll', checkVideoVisibility);
+    window.addEventListener('resize', checkVideoVisibility);
+  
+    checkVideoVisibility();
+  });
+
+  
+// Elements slide down and fade in when they appear in the viewport. They also slide up and fade out.
+function fadeInOrOutOnScroll(elementId) {
+    var element = document.getElementById(elementId);
+    var windowHeight = window.innerHeight;
+  
+    function checkVisibility() {
+      var elementPosition = element.getBoundingClientRect();
+      var startToDisappear = 125;
+  
+      if (elementPosition.bottom > startToDisappear && elementPosition.top < windowHeight - startToDisappear) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      } else {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+      }
+    }
+  
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
+    checkVisibility();
+  }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    fadeInOrOutOnScroll('text1');
+    fadeInOrOutOnScroll('text2');
+    fadeInOrOutOnScroll('text3');
+    fadeInOrOutOnScroll('text4');
+    fadeInOrOutOnScroll('text5');
+    fadeInOrOutOnScroll('text6');
+  });
+  
