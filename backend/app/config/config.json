@@ -1,0 +1,11 @@
+{
+    "models_folder": "models",
+    "database":
+    {
+        "username": "stub_user",
+        "password": "stub_password",
+        "host": "localhost",
+        "port": 5432,
+        "database": "stealth_mods"
+    }
+}
