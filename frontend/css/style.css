@@ -81,11 +81,19 @@ nav a {
     z-index: 999;
     background-color: rgb(255, 255, 255, 0.2) ;
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     backdrop-filter: blur(10px);
+    transform: translateX(-100%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0;
+}
+
+.sidebar-visible {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .sidebar li {
@@ -127,6 +135,10 @@ nav a {
 
 .responsive-padding-title1 {
     padding-top: 40%;
+}
+
+.responsive-padding-title2 {
+    padding-top: 50%;
 }
   
 .right > div {

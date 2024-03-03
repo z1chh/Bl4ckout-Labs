@@ -27,14 +27,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Show/Hide sidebar
 function showSidebar() {
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'flex'
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.style.display = 'flex';
+    setTimeout(() => {
+        sidebar.classList.add('sidebar-visible');
+    }, 10);
 }
 
-function hideSidebar(){
-    const sidebar = document.querySelector('.sidebar')
-    sidebar.style.display = 'none'
+function hideSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    sidebar.classList.remove('sidebar-visible');
+    sidebar.addEventListener('transitionend', function handler() {
+        sidebar.style.display = 'none';
+        sidebar.removeEventListener('transitionend', handler);
+    });
 }
+
 
 
 // Fade in when page just loaded
