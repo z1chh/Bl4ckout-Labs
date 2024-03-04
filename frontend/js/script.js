@@ -171,3 +171,16 @@ function fadeInOrOutOnScroll(elementId) {
     fadeInOrOutOnScroll('text6');
   });
   
+// Buy Now Button appears after 110vh
+  document.addEventListener('scroll', function() {
+    const button = document.querySelector('.buy-now-btn');
+    const triggerHeight = window.innerHeight * 1; // 120vh
+
+    if (window.scrollY > triggerHeight) {
+        button.style.bottom = '20px'; // Distance from bottom when visible
+        button.style.opacity = '1'; // Fully visible
+    } else {
+        button.style.bottom = '-100px'; // Start off screen
+        button.style.opacity = '0'; // Fully hidden
+    }
+});
