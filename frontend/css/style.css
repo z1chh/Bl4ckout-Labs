@@ -116,8 +116,8 @@ nav a {
 .title1 {
     background-color: rgb(19,19,19);
     height: 200px;
-    padding-right: 30px;
-    padding-left: 30px;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 
 .container {
@@ -223,9 +223,6 @@ nav a {
     opacity: 0;
     transition: opacity 2s ease-in-out;
     justify-content: center;
-}
-
-.fade-in-image {
     width: 80%;
     margin-bottom: 30px;
 }
@@ -339,14 +336,6 @@ nav a {
     object-fit: cover;
     left: 0;
     top: 0;
-}
-
-video::-webkit-media-controls {
-    display: none;
-}
-
-video::-webkit-media-controls-start-playback-button {
-    display: none;
 }
 
 .overlay-text {
