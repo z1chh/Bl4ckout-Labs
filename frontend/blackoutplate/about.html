@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/learnmore.css">
+    <link rel="stylesheet" href="./css/about.css">
     <script src="./js/script.js"></script>
     <script src=".js/learnmore.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/terms.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
 </head>
-<body>
+<body style="padding-left: 0; padding-right: 0;">
     <!-- NAV BAR -->
     <nav>
         <ul class="sidebar">
@@ -22,6 +23,7 @@
             <li><a href="/frontend/blackoutplate/faq.html">FAQ</a></li>
             <li><a href="/frontend/blackoutplate/about.html">About</a></li>
             <li><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
+            <li style="border-bottom: 2px solid grey; padding-bottom: 10%;"><a href="/frontend/blackoutplate/terms.html">Terms and Conditions</a></li>
             <li><a href="/frontend/bl4ckoutlabs.html">Our other products</a></li>
         </ul>
         <ul id="mainnav">
@@ -31,9 +33,29 @@
         </ul>
     </nav>
 
-    <div class="contentpadding">
-        
+    <!-- ABOUT US CONTENT -->
+    <div class="header-image">
+        <!-- Ensure you have permission to use the image -->
+        <img src="./images/bmwcar.jpg" alt="Porsche" />
     </div>
 
+    <div class="about-container">
+        <h1 class="about-header">About Us</h1>
+        <p class="about-text">Welcome to <span class="highlight">Stealth Mods</span> – a fusion of passion, engineering, and the pursuit of driving pleasure. As recent grads and car enthusiasts, we channel our shared passions into creating mods that resonate with the heartbeat of the streets.</p>
+        <p class="about-text">From concept to creation, our Montreal-based team is on a mission to develop mods that aren't just products, but symbols of innovation and individuality. The <span class="highlight">license plate hider</span> is our debut creation, crafted for those who appreciate discretion and style.</p>
+        <p class="about-text">At Stealth Mods, every gear and gadget is born from a community dialogue, ensuring that we deliver not just what you need, but what you envision. So rev up your engines and let's redefine the road together!</p>
+    
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">Porsche at a glance</span>
+                <span class="arrow">&#9666;</span> <!-- This is a right-pointing arrow -->
+            </button>
+            <div class="info-content">
+                <p>Quick access to all facts and figures about Porsche.</p>
+            </div>
+        </div>
 
+
+    </div>
 </body>
+</html>

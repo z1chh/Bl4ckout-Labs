@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
   
-// Elements slide down and fade in when they appear in the viewport. They also slide up and fade out.
+// Elements slide down and fade in when they appear in the viewport. They also slide up and fade out. By id.
 function fadeInOrOutOnScroll(elementId) {
     var element = document.getElementById(elementId);
     var windowHeight = window.innerHeight;
@@ -167,3 +167,86 @@ function fadeInOrOutOnScroll(elementId) {
         button.style.opacity = '0';
     }
 });
+
+// Elements slide down and fade in when they appear in the viewport. They also slide up and fade out. By class name.
+function fadeInOrOutOnScrollByClassName(className) {
+    var elements = document.getElementsByClassName(className);
+    var windowHeight = window.innerHeight;
+  
+    function checkVisibility() {
+      for (var i = 0; i < elements.length; i++) {
+        var element = elements[i];
+        var elementPosition = element.getBoundingClientRect();
+        var startToDisappear = 100;
+  
+        if (elementPosition.bottom > startToDisappear && elementPosition.top < windowHeight - startToDisappear) {
+          element.style.opacity = '1';
+          element.style.transform = 'translateY(0)';
+        } else {
+          element.style.opacity = '0';
+          element.style.transform = 'translateY(20px)';
+        }
+      }
+    }
+  
+    window.addEventListener('scroll', checkVisibility);
+    window.addEventListener('resize', checkVisibility);
+    checkVisibility();
+  }
+  
+  // Add the class names of elements if you want them to appear and disappear when going out of the viewport
+  document.addEventListener("DOMContentLoaded", function() {
+    fadeInOrOutOnScrollByClassName('faq');
+  });
+  
+  // Switch between Terms and Conditions and Warranty
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById("termsBtn").addEventListener("click", function() {
+      changeActiveSection("terms");
+    });
+  
+    document.getElementById("warrantyBtn").addEventListener("click", function() {
+      changeActiveSection("warranty");
+    });
+  
+    function changeActiveSection(section) {
+      document.querySelector("#buttons button.active").classList.remove("active");
+      document.querySelector("#content .content.active").classList.remove("active");
+      
+      document.getElementById(section + "Btn").classList.add("active");
+      document.getElementById(section).classList.add("active");
+    }
+  });
+
+// Info toggles for about page
+document.addEventListener('DOMContentLoaded', function() {
+    var toggles = document.querySelectorAll('.info-toggle');
+
+    toggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+            var item = this.parentNode;
+            var content = this.nextElementSibling;
+
+            if (item.classList.contains('active')) {
+                item.classList.remove('active');
+                content.style.display = 'none';
+            } else {
+                var allContents = document.querySelectorAll('.info-content');
+                var allItems = document.querySelectorAll('.info-item');
+                
+                // Hide all contents and remove active class
+                allContents.forEach(function(content) { content.style.display = 'none'; });
+                allItems.forEach(function(item) { item.classList.remove('active'); });
+
+                // Show the clicked content
+                item.classList.add('active');
+                content.style.display = 'block';
+            }
+        });
+    });
+});
+
+
+
+
+  
