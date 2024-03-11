@@ -43,23 +43,6 @@ function hideSidebar() {
     });
 }
 
-
-
-// Fade in when page just loaded
-window.addEventListener('load', function() {
-    setTimeout(function() {
-        document.querySelector('.fade-in-image').style.opacity = '1';
-    }, 100);
-
-    setTimeout(function() {
-        document.querySelector('.text-overlay h1').style.opacity = '1';
-    }, 1000);
-
-    setTimeout(function() {
-        document.querySelector('.text-overlay h5').style.opacity = '1';
-    }, 1200);
-});
-
 // Video plays as soon as page is in view port for Main Video in index.html
 document.addEventListener("DOMContentLoaded", function() {
     var video = document.getElementById('videoFullScreen');
@@ -155,7 +138,7 @@ function fadeInOrOutOnScroll(elementId) {
     window.addEventListener('resize', checkVisibility);
     checkVisibility();
   }
-  
+    // Add the ids of elements if you want them to appear and disappear when going out of the viewport
   document.addEventListener("DOMContentLoaded", function() {
     fadeInOrOutOnScroll('text1');
     fadeInOrOutOnScroll('text2');
@@ -164,6 +147,11 @@ function fadeInOrOutOnScroll(elementId) {
     fadeInOrOutOnScroll('text5');
     fadeInOrOutOnScroll('text6');
     fadeInOrOutOnScroll('text7');
+    fadeInOrOutOnScroll('text8');
+    fadeInOrOutOnScroll('text9');
+    fadeInOrOutOnScroll('img1');
+    fadeInOrOutOnScroll('img2');
+    fadeInOrOutOnScroll('img3');
   });
   
 // Buy Now Button appears after 110vh
@@ -179,73 +167,3 @@ function fadeInOrOutOnScroll(elementId) {
         button.style.opacity = '0';
     }
 });
-
-
-const initSlider = () => {
-    const imageList = document.querySelector(".slider-wrapper .image-list");
-    const slideButtons = document.querySelectorAll(".slider-wrapper .slide-button");
-    const sliderScrollbar = document.querySelector(".container .slider-scrollbar");
-    const scrollbarThumb = sliderScrollbar.querySelector(".scrollbar-thumb");
-    const maxScrollLeft = imageList.scrollWidth - imageList.clientWidth;
-    
-    // Handle scrollbar thumb drag
-    scrollbarThumb.addEventListener("mousedown", (e) => {
-        const startX = e.clientX;
-        const thumbPosition = scrollbarThumb.offsetLeft;
-        const maxThumbPosition = sliderScrollbar.getBoundingClientRect().width - scrollbarThumb.offsetWidth;
-        
-        // Update thumb position on mouse move
-        const handleMouseMove = (e) => {
-            const deltaX = e.clientX - startX;
-            const newThumbPosition = thumbPosition + deltaX;
-
-            // Ensure the scrollbar thumb stays within bounds
-            const boundedPosition = Math.max(0, Math.min(maxThumbPosition, newThumbPosition));
-            const scrollPosition = (boundedPosition / maxThumbPosition) * maxScrollLeft;
-            
-            scrollbarThumb.style.left = `${boundedPosition}px`;
-            imageList.scrollLeft = scrollPosition;
-        }
-
-        // Remove event listeners on mouse up
-        const handleMouseUp = () => {
-            document.removeEventListener("mousemove", handleMouseMove);
-            document.removeEventListener("mouseup", handleMouseUp);
-        }
-
-        // Add event listeners for drag interaction
-        document.addEventListener("mousemove", handleMouseMove);
-        document.addEventListener("mouseup", handleMouseUp);
-    });
-
-    // Slide images according to the slide button clicks
-    slideButtons.forEach(button => {
-        button.addEventListener("click", () => {
-            const direction = button.id === "prev-slide" ? -1 : 1;
-            const scrollAmount = imageList.clientWidth * direction;
-            imageList.scrollBy({ left: scrollAmount, behavior: "smooth" });
-        });
-    });
-
-     // Show or hide slide buttons based on scroll position
-    const handleSlideButtons = () => {
-        slideButtons[0].style.display = imageList.scrollLeft <= 0 ? "none" : "flex";
-        slideButtons[1].style.display = imageList.scrollLeft >= maxScrollLeft ? "none" : "flex";
-    }
-
-    // Update scrollbar thumb position based on image scroll
-    const updateScrollThumbPosition = () => {
-        const scrollPosition = imageList.scrollLeft;
-        const thumbPosition = (scrollPosition / maxScrollLeft) * (sliderScrollbar.clientWidth - scrollbarThumb.offsetWidth);
-        scrollbarThumb.style.left = `${thumbPosition}px`;
-    }
-
-    // Call these two functions when image list scrolls
-    imageList.addEventListener("scroll", () => {
-        updateScrollThumbPosition();
-        handleSlideButtons();
-    });
-}
-
-window.addEventListener("resize", initSlider);
-window.addEventListener("load", initSlider);
