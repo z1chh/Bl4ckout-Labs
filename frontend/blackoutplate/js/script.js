@@ -234,18 +234,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 var allContents = document.querySelectorAll('.info-content');
                 var allItems = document.querySelectorAll('.info-item');
                 
-                // Hide all contents and remove active class
                 allContents.forEach(function(content) { content.style.display = 'none'; });
                 allItems.forEach(function(item) { item.classList.remove('active'); });
 
-                // Show the clicked content
                 item.classList.add('active');
                 content.style.display = 'block';
             }
         });
     });
 });
-
 
 
 
