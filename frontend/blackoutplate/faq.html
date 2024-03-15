@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/learnmore.css">
+    <link rel="stylesheet" href="./css/faq.css">
     <script src="./js/script.js"></script>
     <script src=".js/learnmore.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
@@ -28,58 +28,73 @@
         <ul id="mainnav">
             <li class="menu-icon navbar" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></a></li>
             <li class="invisible-spacer"></li>
-            <li><a href="/frontend/blackoutplate/index.html">BLACKOUT PLATE</a></li>
+            <li><a href="/frontend/blackoutplate/index.html">BL4CKOUT PLATE</a></li>
         </ul>
     </nav>
 
-    <div class="contentpadding">
-        <h2 style="padding-bottom: 10%;">FAQ</h2>
+    <div class="contentpadding faq-container" style="max-width: 800px; margin-top: 100px;">
+        <h2 style="padding-bottom: 25px;">FAQ</h2>
 
-        <h6 style="padding-bottom: 5%;">
+        <h4 style="padding-bottom: 5%;">
             For guidance on installation and to explore more features, check out our series of tutorial videos. They'll provide you with step-by-step instructions and additional insights to help you get the most out of your product.
-        </h6>
-        <video src="/frontend/blackoutplate/images/trimed.mp4" style="width: 50%; text-align: center; justify-content: center; padding-bottom: 5%;"></video>
-        <video src="/frontend/blackoutplate/images/trimed.mp4" style="width: 50%; text-align: center; justify-content: center; padding-bottom: 5%;"></video>
+        </h4>
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">Installation Tutorial</span>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <video src="/frontend/blackoutplate/images/trimed.mp4" style="width: 50%; text-align: center; justify-content: center; padding: 20px;" controls></video>
+            </div>
+        </div>
 
 
-        <h6 class="faq"><b>Q: How does the license plate bracket work?</b></h6>
-        <h6 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
-            A: Our license plate bracket utilizes the latest technology that allows you to seamlessly switch between displaying your license plate and hiding it, all through a remote control.
-        </h6>
+        <h4 class="faq"><b>Q: How does the Bl4ckOut Plate work?</b></h4>
+        <h4 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 20px;">
+            A: Our license plate bracket utilizes the latest technology that allows you to seamlessly 
+            switch between displaying your license plate and hiding it, all through a remote control.
+        </h4>
         
-        <h6 class="faq"><b>Q: Can the display withstand various weather conditions?</b></h6>
-        <h6 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
-            A: Yes, our displays are built to be robust and weather-resistant, suitable for a range of environmental conditions.
-        </h6>
+        <h4 class="faq"><b>Q: Can the display withstand various weather conditions?</b></h4>
+        <h4 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
+            A: Yes, our displays are built to be robust and weather-resistant, suitable for a range 
+            of environmental conditions.
+        </h4>
 
-        <h6 class="faq"><b>Q: Will the plate be visible when the device is off?</b></h6>
-        <h6 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
-            A: Yes, the device retracts to reveal the plate fully, maintaining compliance with parking laws when the vehicle is stationary.
-        </h6>
+        <h4 class="faq"><b>Q: Will the plate be visible when the device is off?</b></h4>
+        <h4 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
+            A: Yes, the device retracts to reveal the plate fully, maintaining compliance with 
+            parking laws when the vehicle is stationary.
+        </h4>
 
-        <h6 class="faq"><b>Q: What are the dimensions of the display?</b></h6>
-        <h6 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
-            A: Our current models are compatible with all North America car license plates, including US motorcycle plates. We also support EU car license plates (50cm x 11cm).
-        </h6>
+        <h4 class="faq"><b>Q: What are the dimensions of the display?</b></h4>
+        <h4 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
+            A: Our current models are compatible with all North America car license plates, 
+            including US motorcycle plates. We also support EU car license plates (50cm x 11cm).
+        </h4>
 
-        <h6 class="faq"><b>Q: Is this device legal for street use?</b></h6>
-        <h6 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
-            A: The device is designed for use on private property or at car shows for display purposes. We advise checking with local laws before use on public roads, as regulations vary by location.
-        </h6>
+        <h4 class="faq"><b>Q: Is this device legal for street use?</b></h4>
+        <h4 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
+            A: The device is designed for use on private property or at car shows for display 
+            purposes. We advise checking with local laws before use on public roads, as regulations vary by location.
+        </h4>
 
-        <h6 class="faq"><b>Q: Can I control when to hide or show my license plate?</b></h6>
-        <h6 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
-            A: Yes, you have complete control with a remote to hide or display your plate as needed within legal confines on private grounds.
-        </h6>
+        <h4 class="faq"><b>Q: Can I control when to hide or show my license plate?</b></h4>
+        <h4 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
+            A: Yes, you have complete control with a remote to hide or display your plate as 
+            needed within legal confines on private grounds.
+        </h4>
 
-        <h6 class="faq"><b>Q: Is there a warranty on the Blackout Plate?</b></h6>
-        <h6 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
-            A: Yes, we offer a warranty that covers any manufacturing defects in materials and workmanship for 30 days.
-        </h6>
+        <h4 class="faq"><b>Q: Is there a warranty on the Blackout Plate?</b></h4>
+        <h4 class="faq" style="color: rgb(154, 163, 143); padding-top: 1%; padding-bottom: 5%;">
+            A: Yes, we offer a warranty that covers any manufacturing defects in materials 
+            and workmanship for 30 days.
+        </h4>
 
-        <h6 style="text-align: center; padding-top: 10%; padding-bottom: 5%;">
-            If you have any additional questions or need further assistance, you can send us a direct message through our website's contact form or reach out via our social media channels for prompt assistance.
-        </h6>
+        <h4 style="text-align: center; padding-top: 10%; padding-bottom: 5%;">
+            If you have any additional questions or need further assistance, you can send us 
+            a direct message through our website's contact form or reach out via our social media channels for prompt assistance.
+        </h4>
         
     </div>
 

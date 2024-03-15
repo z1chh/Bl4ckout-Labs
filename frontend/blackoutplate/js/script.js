@@ -220,30 +220,55 @@ function fadeInOrOutOnScrollByClassName(className) {
 
 // Info toggles for about page
 document.addEventListener('DOMContentLoaded', function() {
-    var toggles = document.querySelectorAll('.info-toggle');
+  var toggles = document.querySelectorAll('.info-toggle');
 
-    toggles.forEach(function(toggle) {
-        toggle.addEventListener('click', function() {
-            var item = this.parentNode;
-            var content = this.nextElementSibling;
+  toggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+          var item = this.parentNode;
+          var content = this.nextElementSibling;
 
-            if (item.classList.contains('active')) {
-                item.classList.remove('active');
-                content.style.display = 'none';
-            } else {
-                var allContents = document.querySelectorAll('.info-content');
-                var allItems = document.querySelectorAll('.info-item');
-                
-                allContents.forEach(function(content) { content.style.display = 'none'; });
-                allItems.forEach(function(item) { item.classList.remove('active'); });
+          if (item.classList.contains('active')) {
+              item.classList.remove('active');
+              content.style.maxHeight = '0';
+          } else {
+              var allContents = document.querySelectorAll('.info-content');
+              var allItems = document.querySelectorAll('.info-item');
+              
+              allContents.forEach(function(content) {
+                  content.style.maxHeight = '0';
+              });
+              allItems.forEach(function(item) {
+                  item.classList.remove('active');
+              });
 
-                item.classList.add('active');
-                content.style.display = 'block';
-            }
-        });
-    });
+              item.classList.add('active');
+              content.style.maxHeight = content.scrollHeight + 'px';
+          }
+      });
+  });
 });
 
+
+
+// Quantity in product.html
+function changeQuantity(change) {
+  const quantityInput = document.getElementById('quantity');
+  const currentQuantity = parseInt(quantityInput.value);
+  const newQuantity = currentQuantity + change;
+  
+  if (newQuantity >= 1) {
+      quantityInput.value = newQuantity;
+  }
+}
+
+function addToCart() {
+  const quantity = document.getElementById('quantity').value;
+  const model = document.getElementById('model').value;
+  
+  alert(`Added ${quantity} of model ${model} to cart!`);
+  // Here you would typically send a request to your server to update the cart,
+  // or update the cart in local storage, including both the model and quantity.
+}
 
 
   

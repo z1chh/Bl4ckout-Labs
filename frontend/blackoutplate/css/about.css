@@ -19,12 +19,12 @@ body, html {
 }
 
 .info-toggle {
-    background-color: #333;
+    background-color: #707070;
     color: white;
     padding: 10px;
     width: 100%;
     text-align: left;
-    border: none;
+    border-radius: 10px;
     outline: none;
     cursor: pointer;
     display: flex;
@@ -52,6 +52,10 @@ body, html {
     transform: rotate(-90deg);
 }
 
+.info-item {
+    margin-bottom: 5px;
+}
+
 .info-item.active .info-content {
     display: block;
 }
@@ -65,13 +69,26 @@ body, html {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 .about-header {
     text-align: center;
     color: #e8491d;
 }
+
 .about-text {
     margin: 20px 0;
 }
+
 .highlight {
     color: #e8491d;
+}
+
+.info-content {
+    overflow: hidden; /* Hide overflow content */
+    max-height: 0; /* Initially hide content */
+    transition: max-height 0.3s ease; /* Add smooth transition effect */
+}
+
+.info-item.active .info-content {
+    max-height: 500px; /* Set a value large enough to show content */
 }

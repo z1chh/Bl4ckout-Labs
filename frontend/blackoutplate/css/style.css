@@ -88,7 +88,7 @@ nav a {
     align-items: flex-start;
     justify-content: flex-start;
     backdrop-filter: blur(10px);
-    transform: translateX(-100%);
+    transform: translateX(-120%);
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 1;
 }
@@ -479,7 +479,16 @@ nav a {
     transform: translateX(-50%);
     padding-left: 10%;
     padding-right: 10% ;
-    padding-top: 25%;
+    padding-top: 100px;
+}
+
+.faq-container {
+    background-color: #fff;
+    color: #333;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 

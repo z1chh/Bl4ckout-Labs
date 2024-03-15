@@ -1,0 +1,45 @@
+.info-item.active .arrow {
+    transform: rotate(-90deg);
+}
+
+.info-item {
+    margin-bottom: 5px;
+}
+
+.info-item.active .info-content {
+    display: block;
+}
+
+.info-toggle {
+    background-color: #707070;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.info-title {
+    flex-grow: 1;
+}
+
+.arrow {
+    display: block;
+    transition: transform 0.3s ease;
+    width: 10px;
+}
+.info-content {
+    background-color: rgb(167, 167, 167);
+    overflow: hidden; /* Hide overflow content */
+    max-height: 0; /* Initially hide content */
+    transition: max-height 0.3s ease; /* Add smooth transition effect */
+    margin-bottom: 35px;
+}
+.info-item.active .info-content {
+    max-height: 500px; /* Set a value large enough to show content */
+}
+

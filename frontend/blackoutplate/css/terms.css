@@ -20,9 +20,11 @@ body {
 #buttons button.active {
     background-color: white;
     color: black;
+    border: #333 solid;
 }
 #buttons button:not(.active) {
     background-color: gray;
+    border: gray solid;
     color: white;
 }
 .content {
@@ -44,4 +46,13 @@ body {
     body {
         margin-top: 20%;
     }
+}
+
+.about-container {
+    background-color: #fff;
+    color: #333;
+    max-width: 700px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
