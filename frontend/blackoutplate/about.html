@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/about.css">
+    <script src="./js/script.js"></script>
+    <script src=".js/learnmore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/terms.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body style="padding-left: 0; padding-right: 0;">
+    <!-- NAV BAR -->
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></a></li>
+            <li><a href="/frontend/blackoutplate/index.html">Home</a></li>
+            <li><a href="/frontend/blackoutplate/faq.html">FAQ</a></li>
+            <li><a href="/frontend/blackoutplate/about.html">About</a></li>
+            <li><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
+            <li style="border-bottom: 2px solid grey; margin-bottom: 10%;"><a href="/frontend/blackoutplate/terms.html">Terms and Conditions</a></li>
+            <li><a href="/frontend/bl4ckoutlabs.html">Our other products</a></li>
+        </ul>
+        <ul id="mainnav">
+            <li class="menu-icon navbar" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></a></li>
+            <li class="invisible-spacer"></li>
+            <li><a href="/frontend/blackoutplate/index.html">BLACKOUT PLATE</a></li>
+        </ul>
+    </nav>
+
+    <!-- ABOUT US CONTENT -->
+    <div class="header-image">
+        <!-- Ensure you have permission to use the image -->
+        <img src="./images/bmwcar.jpg" alt="Porsche" />
+    </div>
+
+    <div class="about-container">
+        <h1 class="about-header">About Us</h1>
+        <p class="about-text">Welcome to <span class="highlight">Bl4ckOut Labs</span> – a group of enthusiasts dedicated to enhancing the driving and riding experience, we've embarked on a mission to create the products we've always wanted. </p>
+        <p class="about-text">Our journey is driven by a desire not just to meet but to exceed the expectations of our fellow enthusiasts. We're on a mission to develop mods that aren't just products, but symbols of innovation and individuality. The <span class="highlight">Bl4ckOut Plate</span> is our debut creation, crafted for those who appreciate discretion and style.</p>
+        <p class="about-text">As we continue to evolve, our range will expand, promising even more exciting advancements. If you have a product <i>you</i> would love to have, don't hesitate to contact us and we'll happily look into it!</p>
+    
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">What inspired the creation of Bl4ckOut Labs?</span>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <p>We're car and bike enthusiasts just like you. We had a strong desire to offer to this community products that combines style, discretion, and personal expression; new mods into the market. We're a team of passionate engineers dedicated to creating innovative automotive mods that we wish we had!</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">What inspired the creation of the "BL4CKOUT" license plate?</span>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <p>A desire to offer car enthusiasts a product that combines style, discretion, and personal expression.</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">Where are Bl4ckOut Labs' products manufactured?</span>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <p> Our products designing, manufacturing and assembling varies from product to product. However, all of our products final stage end up in our own factory, ensuring full control over quality and innovation.</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">How does Bl4ckOut Labs ensure the quality of its products?</span>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <p>By adhering to strict quality control measures and using durable, weather-resistant materials.</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">Can customers customize their "BL4CKOUT" license plates?</span>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <p>We're currently in the process of developing a technology that will allow you to do much more than that!</p>
+            </div>
+        </div>
+        
+        <div class="info-item">
+            <button class="info-toggle">
+                <span class="info-title">Where can customers find more information about our range of products?</span>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <p>Visit our website's product section for detailed information, or <i><a style="text-decoration: none;" href="/frontend/bl4ckoutlabs.html">click the link here!</a></i> </p>
+            </div>
+        </div>
+        
+
+
+    </div>
+</body>
+</html>
