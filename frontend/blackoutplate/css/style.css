@@ -179,13 +179,6 @@ nav a {
     }
   }
 
-
-.faq {
-    transition: opacity 0.5s ease, transform 2.5s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
 #text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #img1, #img2, #img3 {
     transition: opacity 0.5s ease, transform 2.5s ease;
     opacity: 0;
@@ -482,14 +475,6 @@ nav a {
     padding-top: 100px;
 }
 
-.faq-container {
-    background-color: #fff;
-    color: #333;
-    max-width: 700px;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 
 
