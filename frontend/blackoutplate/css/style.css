@@ -179,7 +179,7 @@ nav a {
     }
   }
 
-#text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #img1, #img2, #img3 {
+#text1, #text2, #text3, #text4, #text5, #text6, #img1, #img2, #img3 {
     transition: opacity 0.5s ease, transform 2.5s ease;
     opacity: 0;
     transform: translateY(20px);
@@ -187,8 +187,15 @@ nav a {
 
 
 .title1 {
-    background-color: rgb(19,19,19);
-    height: 200px;
+    background-color: rgb(0, 0, 0);
+    height: 125px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.title2 {
+    background-color: rgb(7, 7, 7);
+    height: 125px;
     padding-right: 5%;
     padding-left: 5%;
 }
@@ -197,8 +204,11 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
 }
+
+
   
 .left {
     margin-right: auto;
@@ -209,7 +219,7 @@ nav a {
 }
 
 .responsive-padding-title1 {
-    padding-top: 40%;
+    padding-top: 70px;
 }
 
 .responsive-padding-title2 {
@@ -231,10 +241,14 @@ nav a {
       width: 100%;
     }
     .responsive-padding-title1 {
-        padding-top: 20%;
+        padding-top: 50%;
     }
     .responsive-padding-title2 {
         padding-top: 20%;
+    }
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }  
   
@@ -247,7 +261,7 @@ nav a {
         width: 40%;
     }
     .responsive-padding-title1 {
-        padding-top: 25%;
+        padding-top: 10%;
     }
     .responsive-padding-title2 {
         padding-top: 25%;
@@ -262,24 +276,34 @@ nav a {
 
 @media(min-width: 800px) {
     .responsive-padding {
-        padding: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 
 @media(min-width: 500px) {
     .responsive-padding {
-        padding: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 
 @media(min-width: 100px) {
     .responsive-padding {
-        padding: 5%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 
 #videoElement {
     width: 100%;
+    max-width: 1200px;
+}
+
+.video2 {
+    display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .introduction {
@@ -475,7 +499,9 @@ nav a {
     padding-top: 100px;
 }
 
-
+#img1, #img2, #img3 {
+    max-width: 900px;
+}
 
 
 
