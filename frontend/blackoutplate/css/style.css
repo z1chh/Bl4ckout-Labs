@@ -106,7 +106,7 @@ nav a {
     width: 100%;
 }
 
-#text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #img1, #img2, #img3 {
+#text1, #text2, #text3, #text4, #text5, #text6, #img1, #img2, #img3 {
     transition: opacity 0.5s ease, transform 2.5s ease;
     opacity: 0;
     transform: translateY(20px);
