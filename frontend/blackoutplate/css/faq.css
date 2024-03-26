@@ -3,14 +3,30 @@ body {
     color: #000000;
 }
 
+.fixed-background {
+    background-image: url('/frontend/blackoutplate/images/background-faq.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 200px;
+    width: 100%;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+
+
 .info-item.active .arrow {
     transform: rotate(-90deg);
 }
 
 .info-item {
     margin-bottom: 5px;
-    /* Add border-top and border-bottom with your desired color and width */
-    border-top: 1px solid #ccc; /* Example color and thickness */
+    border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
 }
 
@@ -26,8 +42,10 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    background-color: transparent; /* Ensure background is transparent */
-    border: none; /* Remove borders from the sides */
+    background-color: transparent; 
+    border: none; 
+    height: 70px;
+    color: #000000;
 }
 
 .info-title {
@@ -44,10 +62,11 @@ body {
     overflow: hidden; 
     max-height: 0; 
     transition: max-height 0.3s ease;
+    padding-left: 10px;
 }
 
 .info-item.active .info-content {
-    max-height: 500px; /* Adjust as necessary */
+    max-height: 500px;
 }
 
 .faq-container {
@@ -65,4 +84,22 @@ body {
 
 .faq-title {
     color: #505050;
+}
+
+.email-button {
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.email-button:hover {
+    background-color: #0056B3;
 }
