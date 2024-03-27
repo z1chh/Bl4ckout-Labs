@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- LOADING EFFECT -->
+    <div id="loading">
+        <img src="/frontend/blackoutplate/images/logo.png" alt="Logo" id="loading-logo">
+    </div>
     <!-- NAV BAR -->
     <nav>
         <ul class="sidebar">
@@ -36,15 +40,33 @@
     
     <div class="contentpadding faq-container" style="max-width: 800px; margin-top: 50px;">
         <h2 style="padding-bottom: 25px;">PRODUCT INFORMATION</h2>
+
+        <div class="info-item">
+            <button class="info-toggle">
+                <h2 class="info-title">Is this device legal for street use?</h2>
+                <span class="arrow">&#9666;</span>
+            </button>
+            <div class="info-content">
+                <h4>Our device is intended for private property or display at car shows. We accept no responsibility 
+                    for its use in any other context. The user assumes all risks, including legal compliance and safety. 
+                    It's the user's duty to adhere to local laws, and any consequences of use outside these guidelines 
+                    are solely the user's responsibility.<br><br>By using this device, the user agrees to indemnify the 
+                    manufacturer and its affiliates from any claims or damages arising from its use. We explicitly disclaim 
+                    any liability for misuse or any resulting harm. The responsibility for legal and safe use rests entirely 
+                    with the user.</h4>
+                <br>
+            </div>
+        </div>
+
         <div class="info-item">
             <button class="info-toggle">
                 <h2 class="info-title">How does the BL4CKOUT Plate work?</h2>
                 <span class="arrow">&#9666;</span>
             </button>
             <div class="info-content">
-                <h4>Our display technology incorporates a unique material embedded within glass to enhance durability. 
+                <h4>Our display technology incorporates a unique material embedded within glass to enhance durability and functionality. 
                 The BL4CKOUT Plate utilizes the latest technology that allows you to seamlessly 
-                switch between displaying your license plate and hiding it, all through a remote control.</h4>
+                switch between displaying your license plate and hiding it, all through a single click of a remote control.</h4>
                 <br>
             </div>
         </div>
@@ -58,8 +80,8 @@
                 <h4>We have meticulously engineered our product to stand the test of time and endure a variety of environmental conditions. Each unit is constructed with 
                 resilience in mind, ensuring that it remains fully operational and visually impeccable regardless 
                 of weather extremes, be it intense sunlight, heavy rain, or freezing temperatures. 
-                This robustness extends not only to the physical durability of the display but also to 
-                its continued performance, ensuring clarity, visibility, and reliability.</h4>
+                <br><br>"Through extensive testing, we have confirmed that our product is reliably operational in temperatures ranging from -30 °C to 70°C. 
+                Furthermore, it has achieved an IP65 rating, signifying a high level of protection against dust ingress and low-pressure water jets from any direction.</h4>
                 <br>
             </div>
         </div>
@@ -70,7 +92,7 @@
                 <span class="arrow">&#9666;</span>
             </button>
             <div class="info-content">
-                <h4>The BL4CKOUT Plate is designed with an innovative mechanism that allows it to retract and 
+                <h4>The BL4CKOUT Plate is designed with an innovative mechanism that allows it to retract its opacity and 
                 expose the license plate fully, ensuring the vehicle remains compliant with parking regulations 
                 when stationary. Our product's transparency when deactivated means it won't drain your car's 
                 battery, offering an efficient solution without compromising on legal requirements or energy consumption.</h4>
@@ -87,23 +109,14 @@
                 <h4>Our product lineup is designed to ensure universal compatibility across a wide range of vehicle 
                 types in North America, fitting all standard car license plates, including specific dimensions for 
                 US motorcycles, as well as accommodating EU car license plate standards.
-                This inclusivity covers North American car plates at 12 inches by 6 inches, motorcycles 
-                at 6 inches by 3 inches, and the European standard car plates at 52cm by 11cm, providing a 
-                versatile solution for drivers looking to maintain privacy while ensuring compliance with local regulations.</h4>
-                <br>
-            </div>
-        </div>
-        
-        <div class="info-item">
-            <button class="info-toggle">
-                <h2 class="info-title">Is this device legal for street use?</h2>
-                <span class="arrow">&#9666;</span>
-            </button>
-            <div class="info-content">
-                <h4>The device is designed for use on private property or at car shows for display 
-                purposes. We advise checking with local laws before use on public roads, as regulations vary by location.
-                We explicitly prohibit its illegal use and emphasize that it is the user's responsibility to comply 
-                with local laws and regulations.</h4>
+                <br><br>
+                This inclusivity covers:
+                 <ul>
+                    <li>- ALL Standard North American car plates: 12" x 6"</li>
+                    <li>- Motorcycle plates at 6" x 3"</li>
+                    <li>- European car plates: 20.5" x 4.3"</li>
+                 </ul>
+                </h4>
                 <br>
             </div>
         </div>
@@ -114,9 +127,9 @@
                 <span class="arrow">&#9666;</span>
             </button>
             <div class="info-content">
-                <h4>The BL4CKOUT Plate comes with a remote control, giving users the ability to conceal or 
-                reveal their license plate instantly. Additionally, the device features an indicator light, 
-                ensuring users can easily determine its operational status at a glance.</h4>
+                <h4>The BL4CKOUT Plate comes with a remote control and a hard-wired indicator LED light, giving users the ability to conceal or 
+                reveal their license plate instantly. Additionally, the indicator light
+                ensures users can easily determine its operational status at a glance.</h4>
                 <br>
             </div>
         </div>

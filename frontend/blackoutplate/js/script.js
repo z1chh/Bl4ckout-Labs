@@ -1,3 +1,20 @@
+// Loading effect
+document.addEventListener('DOMContentLoaded', (event) => {
+  const minimumDisplay = 1500;
+  const loadingScreen = document.getElementById('loading');
+
+  setTimeout(() => {
+    if (loadingScreen) {
+      loadingScreen.style.opacity = '0';
+      setTimeout(() => {
+        loadingScreen.style.display = 'none';
+      }, 500);
+    }
+  }, minimumDisplay);
+});
+
+
+
 // Video playing depending on scroll
 document.addEventListener('DOMContentLoaded', () => {
     const video = document.getElementById('scroll-video');

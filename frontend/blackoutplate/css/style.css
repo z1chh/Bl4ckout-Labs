@@ -15,6 +15,39 @@ body {
     overflow-x: hidden;
 }
 
+/* Loading CSS */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  #loading-logo {
+    animation: pulse 1.5s ease-out;
+    width: 150px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+
 /* Nav Bar CSS */
 nav {
     position: fixed;
