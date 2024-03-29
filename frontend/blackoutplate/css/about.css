@@ -52,6 +52,7 @@ body, html {
 
 .info-title {
     flex-grow: 1;
+    font-size: large;
 }
 
 .arrow {
@@ -65,6 +66,7 @@ body, html {
     max-height: 0; 
     transition: max-height 0.3s ease;
     padding-left: 10px;
+    font-size: medium;
 }
 
 .info-item.active .info-content {
