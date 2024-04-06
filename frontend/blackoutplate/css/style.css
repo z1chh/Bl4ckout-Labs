@@ -93,6 +93,16 @@ nav a {
     color: #f8f8f8;
 }
 
+.svg {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+}
+
+.svg:hover {
+    cursor: pointer;
+}
+
 #mainnav {
     display: flex;
     justify-content: center;
@@ -159,8 +169,15 @@ nav a {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 10px;
 }
+
+.video-container {
+
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+
+}
+
   
 .left {
     margin-right: auto;
@@ -200,6 +217,10 @@ nav a {
     }
 }  
   
+.web-container {
+    padding-left: 20%;
+    padding-right: 20%;
+}
 
 @media(max-width: 800px) {
     .menu-icon {
@@ -213,6 +234,10 @@ nav a {
     }
     .responsive-padding-title2 {
         padding-top: 25%;
+    }
+    .web-container {
+        padding-left: 5px;
+        padding-right: 5px;
     }
 }
 
@@ -381,10 +406,6 @@ nav a {
     padding-right: 10% ;
     padding-top: 100px;
 }
-
-
-
-
 
 /* Footer CSS */
 .footer {

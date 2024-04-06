@@ -12,23 +12,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        var $fixedBg = $('.fixed-background');
+        $(window).on('scroll', function() {
+            var scrolled = $(window).scrollTop();
+            $fixedBg.css('background-position', 'center ' + (-scrolled) + 'px');
+        });
+        });
+    </script>
 </head>
 <body>
+    <!-- LOADING EFFECT -->
+    <div id="loading">
+        <img src="/frontend/blackoutplate/images/logo.png" alt="Logo" id="loading-logo">
+    </div> 
+    
     <!-- NAV BAR -->
     <nav>
         <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></a></li>
+            <li onclick=hideSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></button></li>
             <li><a href="/frontend/blackoutplate/index.html">Home</a></li>
             <li><a href="/frontend/blackoutplate/faq.html">FAQ</a></li>
             <li><a href="/frontend/blackoutplate/about.html">About</a></li>
-            <li><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
-            <li style="border-bottom: 2px solid grey; margin-bottom: 10%;"><a href="/frontend/blackoutplate/terms.html">Terms and Conditions</a></li>
-            <li><a href="/frontend/bl4ckoutlabs.html">Our other products</a></li>
+            <li style="border-bottom: 2px solid grey; margin-bottom: 15px;"><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
+            <li><a href="/frontend/blackoutplate/product.html">BL4CKOUT Plate</a></li>
         </ul>
         <ul id="mainnav">
-            <li class="menu-icon navbar" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></a></li>
+            <li class="menu-icon navbar" onclick=showSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></button></li>
             <li class="invisible-spacer"></li>
-            <li><a href="/frontend/blackoutplate/index.html">BLACKOUT PLATE</a></li>
+            <li><a href="/frontend/blackoutplate/index.html">BL4CKOUT PLATE</a></li>
         </ul>
     </nav>
 
@@ -109,31 +123,31 @@
     
     <!-- Footer -->
     <footer>
-      <div class="footer">
-          <div class="row">
-              <a href=""><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3;"></i></a>
-              <a href="https://www.instagram.com/bl4ckoutplates/"><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3;"></i></a>
-              <a href="#"><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3;"></i></a>
-          </div>
-          
-          <div class="row">
-              <ul>
-                  <li><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
-                  <li><a href="/frontend/bl4ckoutlabs.html">Our Products</a></li>
-                  <li><a href="/frontend/blackoutplate/terms.html">Terms & Conditions</a></li>
-                  <li><a href="/frontend/blackoutplate/about.html">About Us</a></li>
-                  <li><a href="/frontend/blackoutplate/ambassador.html">Become An Ambassador</a></li>
-              </ul>
-          </div>
-          
-          <div class="row">
-              BL4CKOUT Plate, made by enthusiasts, for enthusiasts.
-          </div>
+        <div class="footer">
+            <div class="row">
+                <a href="https://www.tiktok.com/@bl4ckoutlabs"><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3;"></i></a>
+                <a href="https://www.instagram.com/bl4ckoutplates/"><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3;"></i></a>
+                <a href="./contact.html"><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3;"></i></a>
+            </div>
+            
+            <div class="row">
+                <ul>
+                    <li><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
+                    <!-- <li><a href="/frontend/bl4ckoutlabs.html">Our Products</a></li> -->
+                    <li><a href="/frontend/blackoutplate/terms.html">Terms & Conditions</a></li>
+                    <li><a href="/frontend/blackoutplate/about.html">About Us</a></li>
+                    <li> <!-- <a href="/frontend/blackoutplate/ambassador.html"> --> Become An Ambassador <i>- Currently not available</i><!-- </a> --></li> 
+                </ul>
+            </div>
+            
+            <div class="row">
+                BL4CKOUT Plate, made by enthusiasts, for enthusiasts.
+            </div>
 
-          <div class="row">
-              BL4CKOUT Labs Copyright © 2024 - All rights reserved
-          </div>
-      </div>
+            <div class="row">
+                BL4CKOUT Labs Copyright © 2024 - All rights reserved
+            </div>
+        </div>
     </footer>
 </body>
 </html>

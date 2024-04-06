@@ -12,20 +12,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        var $fixedBg = $('.fixed-background');
+        $(window).on('scroll', function() {
+            var scrolled = $(window).scrollTop();
+            $fixedBg.css('background-position', 'center ' + (-scrolled) + 'px');
+        });
+        });
+    </script>
 </head>
 <body>
+    <!-- LOADING EFFECT -->
+    <div id="loading">
+        <img src="/frontend/blackoutplate/images/logo.png" alt="Logo" id="loading-logo">
+    </div> 
+
     <!-- NAV BAR -->
     <nav>
         <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></a></li>
+            <li onclick=hideSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></button></li>
             <li><a href="/frontend/blackoutplate/index.html">Home</a></li>
             <li><a href="/frontend/blackoutplate/faq.html">FAQ</a></li>
             <li><a href="/frontend/blackoutplate/about.html">About</a></li>
-            <li style="border-bottom: 2px solid grey; margin-bottom: 10%;"><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
+            <li style="border-bottom: 2px solid grey; margin-bottom: 15px;"><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
             <li><a href="/frontend/blackoutplate/product.html">BL4CKOUT Plate</a></li>
         </ul>
         <ul id="mainnav">
-            <li class="menu-icon navbar" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></a></li>
+            <li class="menu-icon navbar" onclick=showSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></button></li>
             <li class="invisible-spacer"></li>
             <li><a href="/frontend/blackoutplate/index.html">BL4CKOUT PLATE</a></li>
         </ul>
@@ -82,8 +98,8 @@
         </div>
     </div>    
 
-    <p style="text-align: center; padding-top: 10%; padding-bottom: 5%;">
-        NEED A FAST REPLY ? 
+    <p style="text-align: center; padding-top: 10%; padding-bottom: 20px;">
+        YOU HAVE A QUESTION? TRY VISITING OUR <a href="/frontend/blackoutplate/faq.html">FAQ</a>.
     </p>
 
     
@@ -93,7 +109,7 @@
             <div class="row">
                 <a href="https://www.tiktok.com/@bl4ckoutlabs"><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3;"></i></a>
                 <a href="https://www.instagram.com/bl4ckoutplates/"><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3;"></i></a>
-                <a href="mailto:support@bl4ckoutlabs.com?Subject=SUPPORT%20REQUEST" target="_top" class="email-button"><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3;"></i></a>
+                <a href="./contact.html"><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3;"></i></a>
             </div>
             
             <div class="row">

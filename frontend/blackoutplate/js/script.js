@@ -171,7 +171,7 @@ function fadeInOrOutOnScroll(elementId) {
 // Buy Now Button appears after 110vh
   document.addEventListener('scroll', function() {
     const button = document.querySelector('.buy-now-btn');
-    const triggerHeight = window.innerHeight * 1; // 100vh
+    const triggerHeight = window.innerHeight * 0.5; // 100vh
 
     if (window.scrollY > triggerHeight) {
         button.style.bottom = '20px';
@@ -262,6 +262,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+$(function() {
+  var $fixedBg = $('.fixed-background');
+
+  $(window).on('scroll', function() {
+    var scrolled = $(window).scrollTop();
+    $fixedBg.css('background-position', 'center ' + (-scrolled) + 'px');
+  });
+});
 
 
   

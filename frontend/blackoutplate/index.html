@@ -18,22 +18,24 @@
     <div id="loading">
         <img src="/frontend/blackoutplate/images/logo.png" alt="Logo" id="loading-logo">
     </div> 
+
     <!-- NAV BAR -->
     <nav>
         <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></a></li>
+            <li onclick=hideSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></button></li>
             <li><a href="/frontend/blackoutplate/index.html">Home</a></li>
             <li><a href="/frontend/blackoutplate/faq.html">FAQ</a></li>
             <li><a href="/frontend/blackoutplate/about.html">About</a></li>
-            <li style="border-bottom: 2px solid grey; margin-bottom: 10%;"><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
+            <li style="border-bottom: 2px solid grey; margin-bottom: 15px;"><a href="/frontend/blackoutplate/contact.html">Contact Us</a></li>
             <li><a href="/frontend/blackoutplate/product.html">BL4CKOUT Plate</a></li>
         </ul>
         <ul id="mainnav">
-            <li class="menu-icon navbar" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></a></li>
+            <li class="menu-icon navbar" onclick=showSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></button></li>
             <li class="invisible-spacer"></li>
             <li><a href="/frontend/blackoutplate/index.html">BL4CKOUT PLATE</a></li>
         </ul>
     </nav>
+
     <!-- Main Video -->
     <div>
         <video class="mainvideo" id="videoFullScreen" playsinline preload="none" autoplay loop autoplay muted>
@@ -60,57 +62,63 @@
         </div>
     </div>
 
-    <!-- Title 1 -->
-    <div class="title1">
-        <div class="container">
-            <div class="left">
-                <h2 class="responsive-padding-title1" id="text1">Your privacy matters.</h2>
-            </div>
-            <div class="right" style="color: rgb(188, 206, 168);">
-              <div id="text2">One Click Away.</div>
-              <div id="text3">Learn More</div>
-            </div>
-        </div>
-    </div>
-
-    <a href="#" class="buy-now-btn">Buy Now</a>
-
-    <!-- Informative video of product -->
-    <div class="responsive-padding">
-        <br><br><br><br>
-        <video id="videoElement" preload="none" playsinline muted>
-            <source src="/frontend/blackoutplate/images/homepage_video1.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <br><br><br><br>
-
-        <br><br><br>
-    </div>
-    
-    <!-- Title 2 -->
-    <div class="title1">
-        <div class="container">
-            <div class="left">
-                <h2 class="responsive-padding-title2" id="text4">Multiple Sizes</h2>
-            </div>
-            <div class="right" style="color: rgb(188, 206, 168);">
-              <div id="text5">US, CA, UK and more supported</div>
-              <div id="text6">Worldwide Shipping</div>
+    <div class="">
+        <!-- Title 1 -->
+        <div class="title1">
+            <div class="container web-container">
+                <div class="left">
+                    <h2 class="responsive-padding-title1" id="text1">Your privacy matters.</h2>
+                </div>
+                <div class="right" style="color: rgb(188, 206, 168);">
+                <div id="text2">One Click Away.</div>
+                <div id="text3">Learn More</div>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div id="contentContainer">
-        <h3 style="justify-content: center; padding-top: 15%;">
-            Supporting North American and EU Car Plates, Plus US Motorcycle Plates
-        </h3>
-        <img src="/frontend/blackoutplate/images/License.jpg" alt="Product Image" class="fade-in-image" id="img1" style="padding-top: 10%;">
-        <img src="/frontend/blackoutplate/images/License.jpg" alt="Product Image" class="fade-in-image" id="img2">
-        <img src="/frontend/blackoutplate/images/License.jpg" alt="Product Image" class="fade-in-image" id="img3" style="padding-bottom: 10%;">
-        <h5 style="text-align: center; padding-bottom: 10%;">
-            Our plate brackets are designed to fit and support all standard North American car plates, 
-            select European car plate sizes & motorcycle plates specifically tailored for the US market. 
-        </h5>
+        <a href="#" class="buy-now-btn">Buy Now</a>
+
+        <!-- Informative video of product -->
+        <div class="web-container video-container">
+            <div class="responsive-padding">
+                <br><br><br><br>
+                <video id="videoElement" preload="none" playsinline muted class="web-container">
+                    <source src="/frontend/blackoutplate/images/homepage_video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br><br><br><br>
+                <br><br><br>
+            </div>
+        </div>
+        
+        <!-- Title 2 -->
+        <div class="title1">
+            <div class="container web-container">
+                <div class="left">
+                    <h2 class="responsive-padding-title2" id="text4">Multiple Sizes</h2>
+                </div>
+                <div class="right" style="color: rgb(188, 206, 168);">
+                <div id="text5">US, CA, UK and more supported</div>
+                <div id="text6">Worldwide Shipping</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="web-container">
+            <div id="contentContainer">
+                <h3 style="justify-content: center; padding-top: 15%;">
+                    Supporting North American and EU Car Plates, Plus US Motorcycle Plates
+                </h3>
+                <img src="/frontend/blackoutplate/images/License.jpg" alt="Product Image" class="fade-in-image" id="img1" style="padding-top: 10%;">
+                <img src="/frontend/blackoutplate/images/License.jpg" alt="Product Image" class="fade-in-image" id="img2">
+                <img src="/frontend/blackoutplate/images/License.jpg" alt="Product Image" class="fade-in-image" id="img3" style="padding-bottom: 10%;">
+                <h3 style="text-align: center; padding-bottom: 10%;">
+                    Our plate brackets are designed to fit and support all standard North American car plates, 
+                    select European car plate sizes & motorcycle plates specifically tailored for the US market. 
+                </h3>
+            </div>
+        </div>
+        
     </div>
     
     <!-- Footer -->
@@ -119,7 +127,7 @@
             <div class="row">
                 <a href="https://www.tiktok.com/@bl4ckoutlabs"><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3;"></i></a>
                 <a href="https://www.instagram.com/bl4ckoutplates/"><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3;"></i></a>
-                <a href="mailto:support@bl4ckoutlabs.com?Subject=SUPPORT%20REQUEST" target="_top" class="email-button"><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3;"></i></a>
+                <a href="./contact.html"><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3;"></i></a>
             </div>
             
             <div class="row">
