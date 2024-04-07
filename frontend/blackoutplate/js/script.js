@@ -13,7 +13,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
   }, minimumDisplay);
 });
 
-
+// NavBar becomes black opaque when user scrolls
+window.addEventListener('scroll', function() {
+  var nav = document.querySelector('nav');
+  if(window.pageYOffset > 0){
+      nav.classList.add('nav-opaque');
+  } else {
+      nav.classList.remove('nav-opaque');
+  }
+});
 
 // Video playing depending on scroll
 document.addEventListener('DOMContentLoaded', () => {
