@@ -245,27 +245,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
-// Quantity in product.html
-function changeQuantity(change) {
-  const quantityInput = document.getElementById('quantity');
-  const currentQuantity = parseInt(quantityInput.value);
-  const newQuantity = currentQuantity + change;
-  
-  if (newQuantity >= 1) {
-      quantityInput.value = newQuantity;
-  }
-}
-
-function addToCart() {
-  const quantity = document.getElementById('quantity').value;
-  const model = document.getElementById('model').value;
-  
-  alert(`Added ${quantity} of model ${model} to cart!`);
-  // Here you would typically send a request to your server to update the cart,
-  // or update the cart in local storage, including both the model and quantity.
-}
-
-
   
