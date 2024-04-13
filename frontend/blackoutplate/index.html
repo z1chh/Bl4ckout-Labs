@@ -82,40 +82,45 @@
         <div class="web-container video-container">
             <div class="responsive-padding">
                 <div class="video-container">
-                    <video id="myVideo" preload="none">
+                    <video id="myVideo" preload="none" muted>
                         <source src="/frontend/blackoutplate/images/trimed.mp4" type="video/mp4">
                         Your browser does not support the video tag.
-                    </video>
+                    </video>                    
                 </div>
             </div>
         </div>
         <script>
             var video = document.getElementById("myVideo");
-            var played = false;
+            var hasStarted = false;
         
-            function isVideoInView() {
+
+            function isVideoHalfInView() {
                 var rect = video.getBoundingClientRect();
-                return (
-                    rect.top >= 0 &&
-                    rect.left >= 0 &&
-                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-                );
+                var windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+                var windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+        
+                var verticalInView = (rect.top < windowHeight/2) && ((rect.top + rect.height/2) > 0);
+                var horizontalInView = (rect.left < windowWidth/2) && ((rect.left + rect.width/2) > 0);
+        
+                return verticalInView && horizontalInView;
             }
         
+
             window.addEventListener("scroll", function() {
-                if (isVideoInView() && !played) {
-                    video.play();
-                } else {
-                    video.pause();
+                if (isVideoHalfInView()) {
+                    if (!hasStarted) {
+                        video.play();
+                        hasStarted = true; 
+                    }
                 }
             });
         
+
             video.onended = function() {
-                played = true;
                 video.pause();
             };
         </script>
+        
 
         <!-- Title 2 -->
         <div class="title1">

@@ -38,54 +38,34 @@ body {
     justify-content: center;
     align-items: center;
 }
-.quantity-controls {
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-.quantity-controls button {
-    background-color: #444;
-    color: white;
+
+.stripebutton {
+    width: 100%;
+    background-color: #007bff;
+    height: 40px;
+    color: #f8f8f8;
+    text-decoration: none;
+    line-height: 40px;  
+    text-align: center; 
+    display: block;
     border: none;
-    padding: 5px 10px;
-    cursor: pointer;
     border-radius: 5px;
-}
-.quantity-controls input {
-    width: 50px;
-    text-align: center;
-    margin: 0 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-.add-cart-btn {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-.add-cart-btn:hover {
-    background-color: #45a049;
 }
 
-.model-selection {
-    margin: 20px 0;
-    text-align: center;
+.a-for-stripebutton {
+    display: flex;      
+    justify-content: center; 
+    align-items: center;     
+    margin: 0;          
+    text-decoration: none; 
 }
 
-.model-selection label {
-    margin-right: 10px;
-    font-size: 16px;
-    color: #333;
+.stripebutton:hover {
+    background-color: #0056b3; 
 }
 
-.model-selection select {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    font-size: 16px;
+.accepted-payments {
+    width: 250px;
+    margin-top: 25px;
 }
+
