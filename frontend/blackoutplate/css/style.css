@@ -177,9 +177,8 @@ nav a {
 }
 
 .video-container {
-
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -269,9 +268,15 @@ nav a {
         padding: 5%;
     }
 }
+.video-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
+}
 
-#videoElement {
-    width: 100%;
+#myVideo { 
+    width: 100%; 
 }
 
 .introduction {

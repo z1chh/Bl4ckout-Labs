@@ -50,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+
 // Show/Hide sidebar
 function showSidebar() {
     const sidebar = document.querySelector('.sidebar');
@@ -270,6 +271,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Banner image effect for the class .fixed-background
 $(function() {
   var $fixedBg = $('.fixed-background');
 

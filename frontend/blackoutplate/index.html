@@ -62,7 +62,7 @@
         </div>
     </div>
 
-    <div class="">
+    <div>
         <!-- Title 1 -->
         <div class="title1">
             <div class="container web-container">
@@ -81,16 +81,42 @@
         <!-- Informative video of product -->
         <div class="web-container video-container">
             <div class="responsive-padding">
-                <br><br><br><br>
-                <video id="videoElement" preload="none" playsinline muted class="web-container">
-                    <source src="/frontend/blackoutplate/images/homepage_video1.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-                <br><br><br><br>
-                <br><br><br>
+                <div class="video-container">
+                    <video id="myVideo" preload="none">
+                        <source src="/frontend/blackoutplate/images/trimed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
         </div>
+        <script>
+            var video = document.getElementById("myVideo");
+            var played = false;
         
+            function isVideoInView() {
+                var rect = video.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+        
+            window.addEventListener("scroll", function() {
+                if (isVideoInView() && !played) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            });
+        
+            video.onended = function() {
+                played = true;
+                video.pause();
+            };
+        </script>
+
         <!-- Title 2 -->
         <div class="title1">
             <div class="container web-container">
