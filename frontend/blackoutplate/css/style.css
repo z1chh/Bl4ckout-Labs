@@ -79,9 +79,17 @@ nav li {
     color: #f8f8f8;
 }
 
-nav li:not(:first-child):hover {
+.sidebar li a:hover {
     background-color: #f8f8f8;
     transition: all 0.3s ease-in-out;
+}
+
+#mainnav li a {
+    transition: transform 0.3s ease-in-out;
+}
+
+#mainnav li a:hover {
+    transform: scale(1.5);
 }
 
 nav li a:hover {
