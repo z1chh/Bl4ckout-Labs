@@ -1,70 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./blackoutplate/css/style.css">
-    <link rel="stylesheet" href="./blackoutplate/css/admin.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./blackoutplate/css/admin.css" />
     <script src="./js/script.js"></script>
     <script src=".js/learnmore.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/terms.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/terms.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <!-- NAV BAR -->
     <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></a></li>
-            <li><a href="/blackoutplate/index.html">Home</a></li>
-            <li><a href="/blackoutplate/faq.html">FAQ</a></li>
-            <li><a href="/blackoutplate/about.html">About</a></li>
-            <li><a href="/blackoutplate/contact.html">Contact Us</a></li>
-            <li style="border-bottom: 2px solid grey; margin-bottom: 10%;"><a href="/blackoutplate/terms.html">Terms and Conditions</a></li>
-            <li><a href="/bl4ckoutlabs.html">Our other products</a></li>
-        </ul>
-        <ul id="mainnav">
-            <li class="menu-icon navbar" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></a></li>
-            <li class="invisible-spacer"></li>
-            <li><a href="/blackoutplate/index.html">BLACKOUT PLATE</a></li>
-        </ul>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="35"
+              viewBox="0 -960 960 960"
+              width="35"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                fill="white"
+              /></svg
+          ></a>
+        </li>
+        <li><a href="/blackoutplate/index.html">Home</a></li>
+        <li><a href="/blackoutplate/faq.html">FAQ</a></li>
+        <li><a href="/blackoutplate/about.html">About</a></li>
+        <li><a href="/blackoutplate/contact.html">Contact Us</a></li>
+        <li style="border-bottom: 2px solid grey; margin-bottom: 10%">
+          <a href="/blackoutplate/terms.html">Terms and Conditions</a>
+        </li>
+        <li><a href="/bl4ckoutlabs.html">Our other products</a></li>
+      </ul>
+      <ul id="mainnav">
+        <li class="menu-icon navbar" onclick="showSidebar()">
+          <a href="#"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="35"
+              viewBox="0 -960 960 960"
+              width="35"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                fill="white"
+              /></svg
+          ></a>
+        </li>
+        <li class="invisible-spacer"></li>
+        <li><a href="/blackoutplate/index.html">BLACKOUT PLATE</a></li>
+      </ul>
     </nav>
 
     <!-- ADMIN DASHBOARD -->
-    <h1 style="margin-top: 10%;">Order Management Dashboard</h1>
+    <h1 style="margin-top: 10%">Order Management Dashboard</h1>
 
     <div class="filter">
-        <label for="status-filter">Filter by Fulfillment Status:</label>
-        <select id="status-filter">
-            <option value="">All</option>
-            <option value="Pending">Pending</option>
-            <option value="Shipped">Shipped</option>
-            <option value="Delivered">Delivered</option>
-        </select>
+      <label for="status-filter">Filter by Fulfillment Status:</label>
+      <select id="status-filter">
+        <option value="">All</option>
+        <option value="Pending">Pending</option>
+        <option value="Shipped">Shipped</option>
+        <option value="Delivered">Delivered</option>
+      </select>
     </div>
 
     <table id="orders-table">
-        <thead>
-            <tr>
-                <th>Order ID</th>
-                <th>Customer Name</th>
-                <th>Address</th>
-                <th>Order Date</th>
-                <th>Order Contents</th>
-                <th>Total Amount</th>
-                <th>Fulfillment Status</th>
-                <th>Payment Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Table rows will be populated by JavaScript -->
-        </tbody>
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Customer Name</th>
+          <th>Address</th>
+          <th>Order Date</th>
+          <th>Order Contents</th>
+          <th>Total Amount</th>
+          <th>Fulfillment Status</th>
+          <th>Payment Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Table rows will be populated by JavaScript -->
+      </tbody>
     </table>
-
-
-</body>
+  </body>
 </html>

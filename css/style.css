@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap'); 
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(0, 0, 0);
+    color: #f8f8f8;
+    font-family: 'Lato', sans-serif;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Loading CSS */
+#loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out;
+  }
+  
+  #loading-logo {
+    animation: pulse 1.5s ease-out;
+    width: 150px;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+/* Nav Bar CSS */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: linear-gradient(to bottom, rgb(29, 29, 29) 0%, rgba(0, 0, 0, 0) 100%);
+    background-color: transparent;
+    transition: background-color 1.0s ease;
+}
+
+.nav-opaque {
+    background: rgb(29, 29, 29); 
+    height: 55px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: #f8f8f8;
+}
+
+nav li {
+    height: 70px;
+    color: #f8f8f8;
+}
+
+.sidebar li a:hover {
+    background-color: #f8f8f8;
+    transition: all 0.3s ease-in-out;
+}
+
+#mainnav li a {
+    transition: transform 0.3s ease-in-out;
+}
+
+#mainnav li a:hover {
+    transform: scale(1.5);
+}
+
+nav li a:hover {
+    color: #000000;
+    transition: all 0.3s ease-in-out
+}
+
+nav a {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #f8f8f8;
+}
+
+.svg {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+}
+
+.svg:hover {
+    cursor: pointer;
+}
+
+#mainnav {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    list-style-type: none;
+}
+  
+.menu-icon.navbar {
+    position: absolute;
+    left: 0;
+}
+  
+.invisible-spacer {
+    visibility: hidden;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 40%;
+    z-index: 10000;
+    background-color: rgba(17, 17, 17, 0.9) ;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    backdrop-filter: blur(10px);
+    transform: translateX(-120%);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.sidebar-visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.sidebar li {
+    width: 100%;
+}
+
+.sidebar a {
+    width: 100%;
+}
+
+#text1, #text2, #text3, #text4, #text5, #text6, #img1, #img2, #img3 {
+    transition: opacity 0.5s ease, transform 2.5s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+
+.title1 {
+    background-color: rgb(19,19,19);
+    height: 200px;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.video-container {
+    justify-content: center;
+    align-items: center;
+
+}
+
+  
+.left {
+    margin-right: auto;
+}
+  
+.right {
+    display: flex;
+}
+
+.responsive-padding-title1 {
+    padding-top: 40%;
+}
+
+.responsive-padding-title2 {
+    padding-top: 50%;
+}
+  
+.right > div {
+    margin: 5px;
+}
+  
+@media (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .right {
+      flex-direction: column;
+      justify-content: flex-start; 
+      width: 100%;
+    }
+    .responsive-padding-title1 {
+        padding-top: 20%;
+    }
+    .responsive-padding-title2 {
+        padding-top: 20%;
+    }
+}  
+  
+.web-container {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+@media(max-width: 800px) {
+    .menu-icon {
+        display: block;
+    }
+    .sidebar {
+        width: 40%;
+    }
+    .responsive-padding-title1 {
+        padding-top: 25%;
+    }
+    .responsive-padding-title2 {
+        padding-top: 25%;
+    }
+    .web-container {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media(max-width: 500px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+@media(min-width: 800px) {
+    .responsive-padding {
+        padding: 10%;
+    }
+}
+
+@media(min-width: 500px) {
+    .responsive-padding {
+        padding: 10%;
+    }
+}
+
+@media(min-width: 100px) {
+    .responsive-padding {
+        padding: 5%;
+    }
+}
+.video-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 70vh; 
+}
+
+#myVideo { 
+    width: 100%; 
+}
+
+.introduction {
+    text-align: center;
+    margin-top: 15%;
+}
+
+#contentContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 5%;
+    padding-right: 5% ;
+}
+
+.fade-in-image {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+
+.text-overlay {
+    text-align: center;
+}
+
+.buy-now-btn {
+    position: fixed;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    background-color: #007bff;
+    color: white;
+    padding: 20px 30px; 
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+@media (max-width: 600px) {
+    .buy-now-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+.button:after {
+    filter: blur(50px);
+}
+
+.preorder-btn {
+    text-decoration: none;
+}
+
+.preorder-a {
+    text-decoration: none;
+    color: #f8f8f8;
+    bottom: 5%;
+}
+
+.mainvideo {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    z-index: 10;
+    white-space: nowrap;
+}
+
+#muteButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    z-index: 30;
+}
+
+#muteButton svg {
+    fill: #fff;
+    display: block;
+}
+
+.center-wrapper {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Scroll down Animation */
+.scroll-down-animation {
+    animation: slightJump 2s infinite;
+    display: inline-block;
+}
+
+@keyframes slightJump {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.contentpadding {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 10%;
+    padding-right: 10% ;
+    padding-top: 100px;
+}
+
+/* Footer CSS */
+.footer {
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    margin-top: 100px;
+    margin-bottom: 0;
+}
+    
+.footer .row {
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+}
+    
+.footer .row a {
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+}
+    
+.footer .row a:hover {
+    color:#fff;
+}
+    
+.footer .row ul {
+    width:100%;
+}
+    
+.footer .row ul li {
+    display:inline-block;
+    margin:0px 30px;
+}
+    
+.footer .row a i {
+    font-size:2em;
+    margin:0% 1%;
+}
+    
+@media (max-width:720px) {
+    .footer {
+    text-align:left;
+    padding:5%;
+    }
+    .footer .row ul li {
+    display:block;
+    margin:10px 0px;
+    text-align:left;
+    }
+    .footer .row a i {
+    margin:0% 3%;
+    }
+}
+ 
