@@ -4,68 +4,100 @@ body {
     padding: 20px;
     background-color: #f0f0f0;
 }
-.product-container {
-    max-width: 600px;
-    margin: 40px auto;
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.product-image img {
-    max-width: 100%;
-    display: block;
-    border-radius: 8px;
-}
-.product-info {
-    margin-top: 20px;
+
+.gallery {
+    flex: 1 1 300px;
     text-align: center;
 }
-.product-price {
-    font-size: 28px;
-    color: #333;
-    margin: 20px 0;
-    font-weight: 600;
+
+.main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
-.product-description {
-    margin: 20px 0;
-    color: #666;
-    line-height: 1.6;
-}
-.add-to-cart {
-    margin-top: 30px;
+
+.thumbnails {
     display: flex;
     justify-content: center;
-    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
 }
 
-.stripebutton {
+.thumb {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.thumb:hover {
+    transform: scale(1.1);
+}
+
+.product-details {
+    flex: 1 1 300px;
+    padding: 20px;
+    text-align: left;
+}
+
+#product-name {
+    font-size: 24px;
+    color: #333;
+}
+
+.price {
+    font-size: 20px;
+    color: green;
+}
+
+.description {
+    margin: 10px 0;
+    color: #555;
+}
+
+.select {
+    padding: 10px;
+    margin: 10px 0;
     width: 100%;
+}
+
+.buy-now {
+    display: inline-block;
     background-color: #007bff;
-    height: 40px;
-    color: #f8f8f8;
+    color: white;
+    padding: 10px 20px;
     text-decoration: none;
-    line-height: 40px;  
-    text-align: center; 
-    display: block;
-    border: none;
     border-radius: 5px;
+    margin-top: 10px;
 }
 
-.a-for-stripebutton {
-    display: flex;      
-    justify-content: center; 
-    align-items: center;     
-    margin: 0;          
-    text-decoration: none; 
-}
-
-.stripebutton:hover {
-    background-color: #0056b3; 
+.buy-now:hover {
+    background-color: #0056b3;
 }
 
 .accepted-payments {
-    width: 250px;
-    margin-top: 25px;
+    width: 100%;
+    margin-top: 10px;
 }
 
+.additional-info {
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gallery, .product-details {
+        flex: 1 1 100%;
+    }
+}

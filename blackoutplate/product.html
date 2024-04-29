@@ -15,6 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="product.js" defer></script>
 </head>
 <body style="padding-left: 0; padding-right: 0;">
     <!-- LOADING EFFECT -->
@@ -38,25 +39,34 @@
             <li><a href="index.html"><img src="images/logo no background.png" style="width: 50px;"></a></li>
         </ul>
     </nav>
-
-    <div class="product-container">
-        <div class="product-image">
-            <img src="images/License.jpg" alt="Luxurious Product">
+    <div class="container">
+        <div class="gallery">
+            <img src="images/BLK-US.png" alt="Main Product Image" class="main-image">
+            <div class="thumbnails">
+                <img src="images/BLK-EU.png" alt="Thumbnail 1" class="thumb" onclick="changeImage('images/BLK-EU.png');">
+                <img src="images/BLK-US.png" alt="Thumbnail 2" class="thumb" onclick="changeImage('images/BLK-US.png');">
+                <img src="images/blk-US.png" alt="Thumbnail 3" class="thumb" onclick="changeImage('images/thumb3.jpg');">
+                <img src="images/thumb4.jpg" alt="Thumbnail 4" class="thumb" onclick="changeImage('images/thumb4.jpg');">
+            </div>
         </div>
-        <div class="product-info">
-            <h1>BL4CKOUT Plate</h1>
-            <p class="product-price">$194.99</p>
-            <p class="product-description">Discover the epitome of luxury with our exclusive product. Designed for those who seek unparalleled quality and craftsmanship.</p>
-    
-            <a href="https://buy.stripe.com/test_bIY29s1HicsHfdeeUY" class="a-for-stripebutton">
-                <div class="stripebutton">
-                    BUY NOW
-                </div>
-            </a>
-            <img class="accepted-payments" src="images/accepted-payments.jpg">
+        <div class="product-details">
+            <h1 id="product-name">Product Name</h1>
+            <p class="price" id="product-price">$199.99</p>
+            <p class="description" id="product-description">Short product description here. This part of the text explains the features of the product.</p>
+            <select id="product-model" onchange="updateProductDetails()">
+                <option value="na1">Car - North America</option>
+                <option value="na2">Car - North America x2</option>
+                <option value="eu">Car - Europe</option>
+                <option value="usmoto">Motorcycle - US</option>
+            </select>
+            <a href="#" class="buy-now" id="buy-now-link">BUY NOW</a>
+            <img src="images/accepted-payments.jpg" alt="Accepted Payments" class="accepted-payments">
+            <div class="additional-info">
+                <h2>More Details</h2>
+                <p>This section contains additional details about the product, such as size, color options, warranty information, and more.</p>
+            </div>
         </div>
     </div>
-    
     
     <!-- Footer -->
     <footer>
