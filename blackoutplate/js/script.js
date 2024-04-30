@@ -180,7 +180,7 @@ function fadeInOrOutOnScroll(elementId) {
 // Buy Now Button appears after 110vh
   document.addEventListener('scroll', function() {
     const button = document.querySelector('.buy-now-btn');
-    const triggerHeight = window.innerHeight * 0.5; // 100vh
+    const triggerHeight = window.innerHeight * 0.01; // 100vh
 
     if (window.scrollY > triggerHeight) {
         button.style.bottom = '20px';

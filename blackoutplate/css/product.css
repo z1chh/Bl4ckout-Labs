@@ -45,6 +45,9 @@ body {
     flex: 1 1 300px;
     padding: 20px;
     text-align: left;
+    display: flex;      
+    flex-direction: column; 
+    height: 450px;
 }
 
 #product-name {
@@ -65,7 +68,7 @@ body {
 .select {
     padding: 10px;
     margin: 10px 0;
-    width: 100%;
+    width: 90%;
 }
 
 .buy-now {
@@ -76,6 +79,8 @@ body {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    text-align: center; 
+    width: 90%;
 }
 
 .buy-now:hover {
@@ -83,8 +88,11 @@ body {
 }
 
 .accepted-payments {
-    width: 100%;
+    width: 30%;
     margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .additional-info {
