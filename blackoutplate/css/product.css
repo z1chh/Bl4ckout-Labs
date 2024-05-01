@@ -68,11 +68,13 @@ body {
     padding: 10px;
     margin: 10px 0;
     width: 95%;
+    height: 35px;
 }
 
 .buy-now {
     display: inline-block;
-    background-color: #007bff;
+    /*background-color: #007bff;*/
+    background-color: #969696;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -80,9 +82,14 @@ body {
     text-align: center; 
     width: 90%;
 }
-
+/* REMOVE THIS WHEN WEBSITE GOES LIVE 
 .buy-now:hover {
     background-color: #0056b3;
+}*/
+
+.buy-now:hover {
+    background-color: #969696;
+    cursor:default;
 }
 
 .accepted-payments {
@@ -94,7 +101,10 @@ body {
 }
 
 .additional-info {
-    padding-top: 20px;
+    padding-top: 10px;
+    text-align: left;
+    padding: 20px;
+    max-width: 1200px;
 }
 
 @media (max-width: 768px) {
