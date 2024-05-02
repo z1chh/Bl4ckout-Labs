@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script src="product.js" defer></script>
+    <script src="/blackoutplate/js/product.js"></script>
 </head>
 <body style="padding-left: 0; padding-right: 0;">
     <!-- LOADING EFFECT -->
@@ -38,37 +38,40 @@
             <li><a href="index.html"><img src="images/logo no background.png" style="width: 50px;"></a></li>
         </ul>
     </nav>
+        
     <div class="container">
         <div class="gallery">
             <img src="images/BLK-US.png" alt="Main Product Image" class="main-image">
             <div class="thumbnails">
-                <img src="images/BLK-moto.png" alt="Thumbnail 1" class="thumb" onclick="changeImage('images/BLK-US.png');">
-                <img src="images/BLK-EU.png" alt="Thumbnail 2" class="thumb" onclick="changeImage('images/BLK-US.png');">
-                <img src="images/License - Copy.jpg" alt="Thumbnail 3" class="thumb" onclick="changeImage('images/BLK-US.png');">
-                <img src="images/BLK-US.png" alt="Thumbnail 4" class="thumb" onclick="changeImage('images/BLK-US.png');">
+                <img src="images/BLK-moto.png" alt="Thumbnail 1" class="thumb">
+                <img src="images/BLK-EU.png" alt="Thumbnail 2" class="thumb">
+                <img src="images/License - Copy.jpg" alt="Thumbnail 3" class="thumb">
+                <img src="images/BLK-US.png" alt="Thumbnail 4" class="thumb">
             </div>
         </div>
+        
+        
         <div class="product-details">
             <h1 id="product-name">BL4CKOUT Plate</h1>
             <p class="price" id="product-price">$199.99 USD</p>
             <p class="description" id="product-description">
-                Transform your vehicle’s appearance and privacy with the touch of a button. The BL4CKOUT Plate offers a unique blend of technology and style, making it the perfect accessory for any car enthusiast. With a simple remote control, switch from a transparent to a solid black display to cover your license plate, ensuring privacy and compliance at shows or private events.
+                Transform your vehicle’s appearance and privacy with the touch of a button. With a simple remote control, switch from a transparent to a solid black display to cover your license plate, ensuring privacy and compliance at shows or private events.
             </p>
-            <br>
             <h3>Select your size</h3>
-            <select id="product-model" onchange="updateProductDetails()" class="select-option">
-                <option value="na1">Car - North America</option>
-                <option value="na2">Car - North America (Front and Back plate)</option>
-                <option value="eu">Car - Europe</option>
-                <option value="usmoto">Motorcycle - US</option>
+            <select id="product-model" class="select-option">
+                <option value="na1">Car - North America (30 cm x 15 cm)</option>
+                <option value="na2">Car - North America (Front and Back plate) (30 cm x 15 cm)</option>
+                <option value="eu">Car - Europe (52 cm x 11 cm)</option>
+                <option value="usmoto">Motorcycle - US (7" x 4")</option>
             </select>
             <h3>Select the shell type</h3>
-            <select class="select-option">
-                <option value="acrylic">Acrylic Shell</option>
-                <option value="silicone" disabled>Silicone Shell - Out of Stock</option>
-            </select>
+            <select id="shell-type" class="select-option">
+                <option value="acrylic" id="acrylic-option">Acrylic Shell</option>
+                <option value="silicone" id="silicone-option">Silicone Shell</option>
+            </select>            
+            
             <br><br>
-            <h3 style="color: #ff0000;"><i><b>This product will be available on May 5th at 00:00 EST. </b></i></h3>
+            <h3 style="color: #ff0000;"><i><b>This product will be available in limited quantity only on May 5th at 00:00 EST. </b></i></h3>
             <br>
             <a href="#" class="buy-now" id="buy-now-link">BUY NOW</a>
             <img src="images/accepted-payments.jpg" alt="Accepted Payments" class="accepted-payments">
@@ -81,16 +84,18 @@
             <p>The BL4CKOUT Plate is available in multiple sizes to ensure a perfect fit for various vehicle types. Each unit features a durable construction with a slight dark tint when transparent, providing privacy while maintaining visibility.</p>
             <br><br>
             <ul>
-                <li style="list-style-type: none;"><strong>Sizes:</strong>
+                <li style="list-style-type: none;"><strong>Sizes and Dimensions:</strong>
                     <ul style="padding: 15px;">
-                        <li>North America Car Plates: 12" x 6"</li>
-                        <li>European Car Plates: 20.5" x 4.4"</li>
-                        <li>Motorcycle Plates: 7" x 4"</li>
+                        <li>North America Car Plates: 12" x 6" (30 cm x 15 cm) - fits most US and Canadian vehicles</li>
+                        <li>European Car Plates: 20.5" x 4.4" (52 cm x 11 cm) - compatible with standard EU plate sizes</li>
+                        <li>Motorcycle Plates: 7" x 4" (18 cm x 10 cm) - designed for US motorcycles</li>
                     </ul>
+                    Clients are responsible for verifying that their license plate fits our product dimensions.
                 </li>
+                <br>
                 <li style="list-style-type: none;"><strong>Waterproof Rating:</strong> <br>Each plate is rigorously tested and rated at IP65, ensuring resistance to dust and protection against low-pressure water jets from any direction.</li>
                 <br>
-                <li style="list-style-type: none;"><strong>Shipping:</strong> <br>Enjoy free shipping to the US and Canada. Worldwide shipping is also available; however, clients in the EU will be responsible for shipping costs.</li>
+                <li style="list-style-type: none;"><strong>Shipping:</strong> <br>Enjoy free shipping to North America. Worldwide shipping is also available; however, clients in the EU will be responsible for shipping costs.</li>
             </ul>
             <br>
             <p>Our product is designed to withstand various environmental conditions, making it an ideal choice for car enthusiasts around the globe. Confirm your vehicle's compatibility with our dimensions to ensure a perfect fit and optimal performance.</p>
@@ -104,10 +109,13 @@
                 <li>Set of bolts and washers for secure installation</li>
                 <li>1x Remote Control for easy operation</li>
                 <li>Essential paperwork including installation guide, warranty information, and safety instructions</li>
+                <li>Optional: Double Plate Package for North America (Front and Back) – comes with 2 plates controlled by a single remote</li>
             </ul>
             <p>Each component is crafted with the highest quality materials and technology to enhance your vehicle’s functionality and aesthetic appeal.</p>
-        </div>        
+        </div>
     </div>
+
+    
     
     <!-- Footer -->
     <footer>

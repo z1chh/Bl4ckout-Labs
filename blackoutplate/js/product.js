@@ -1,33 +1,100 @@
-function changeImage(src) {
-    document.querySelector('.main-image').src = src;
-}
-
-function updateProductDetails() {
-    var model = document.getElementById('product-model').value;
-    var productName = document.getElementById('product-name');
-    var productPrice = document.getElementById('product-price');
-    var productDescription = document.getElementById('product-description');
+// Changes the price of the product and the link of the buy-now button based on the selected model
+document.addEventListener('DOMContentLoaded', function() {
+    var thumbnails = document.querySelectorAll('.thumb');
+    var modelSelect = document.getElementById('product-model');
+    var priceLabel = document.getElementById('product-price');
+    var acrylicOption = document.getElementById('acrylic-option');
+    var siliconeOption = document.getElementById('silicone-option');
     var buyNowLink = document.getElementById('buy-now-link');
 
-    if (model === 'na1') {
-        productName.textContent = 'Car - North America';
-        productPrice.textContent = '$199.99';
-        productDescription.textContent = 'Description for North American cars, optimized for performance and compliance with local regulations.';
-        buyNowLink.href = 'https://buylinkforna1.com';
-    } else if (model === 'na2') {
-        productName.textContent = 'Car - North America x2';
-        productPrice.textContent = '$299.99';
-        productDescription.textContent = 'Double the features, double the fun! Enhanced package for North American cars.';
-        buyNowLink.href = 'https://buylinkforna2.com';
-    } else if (model === 'eu') {
-        productName.textContent = 'Car - Europe';
-        productPrice.textContent = '$249.99';
-        productDescription.textContent = 'European car model, designed with precision and adherence to EU standards.';
-        buyNowLink.href = 'https://buylinkforeu.com';
-    } else if (model === 'usmoto') {
-        productName.textContent = 'Motorcycle - US';
-        productPrice.textContent = '$159.99';
-        productDescription.textContent = 'Specifically tailored for US motorcycles, ensuring top-notch performance and style.';
-        buyNowLink.href = 'https://buylinkforusmoto.com';
+    function onThumbnailClick(event) {
+        event.preventDefault();
+        var src = this.getAttribute('src');
+        document.querySelector('.main-image').setAttribute('src', src);
     }
+
+    function updatePrice() {
+        var selectedOption = modelSelect.value;
+        switch(selectedOption) {
+            case 'na1':
+                priceLabel.textContent = '$165 USD';
+                buyNowLink.href = 'https://www.facebook.com';
+                break;
+            case 'na2':
+                priceLabel.textContent = '$239 USD';
+                buyNowLink.href = 'https://www.tiktok.com';
+                break;
+            case 'eu':
+                priceLabel.textContent = '$174 USD';
+                buyNowLink.href = 'https://www.instagram.com';
+                break;
+            case 'usmoto':
+                priceLabel.textContent = '$140 USD';
+                buyNowLink.href = 'https://www.google.com';
+                break;
+            default:
+                priceLabel.textContent = '$165 USD';
+                buyNowLink.href = '#';
+        }
+    }
+    // Disable the 'Silicone Shell' option if the 'na1' or 'na2' model is selected
+    function updateShellOptions() {
+        var model = modelSelect.value;
+        if (model === 'na1' || model === 'na2') {
+            acrylicOption.disabled = true;
+            acrylicOption.textContent = "Acrylic Shell - Not Available";
+            siliconeOption.disabled = false;
+            siliconeOption.textContent = "Silicone Shell";
+        } else {
+            acrylicOption.disabled = false;
+            acrylicOption.textContent = "Acrylic Shell";
+            siliconeOption.disabled = true;
+            siliconeOption.textContent = "Silicone Shell - Out of Stock";
+        }
+    }
+
+    modelSelect.addEventListener('change', function() {
+        updatePrice();
+        updateShellOptions();
+    });
+
+    thumbnails.forEach(function(thumbnail) {
+        thumbnail.addEventListener('click', onThumbnailClick);
+    });
+
+    modelSelect.value = 'na1';
+    updatePrice();
+    updateShellOptions();
+});
+
+
+
+function nextImage() {
+    const images = document.querySelectorAll('.thumb');
+    const mainImage = document.querySelector('.main-image');
+    let currentIndex = Array.from(images).findIndex(image => image.src === mainImage.src);
+
+    if (currentIndex === images.length - 1) {
+        currentIndex = -1;
+    }
+
+    mainImage.src = images[currentIndex + 1].src;
 }
+
+function previousImage() {
+    const images = document.querySelectorAll('.thumb');
+    const mainImage = document.querySelector('.main-image');
+    let currentIndex = Array.from(images).findIndex(image => image.src === mainImage.src);
+
+    if (currentIndex === 0) {
+        currentIndex = images.length;
+    }
+
+    mainImage.src = images[currentIndex - 1].src;
+}
+
+document.querySelectorAll('.thumb').forEach(thumb => {
+    thumb.addEventListener('click', (e) => {
+        document.querySelector('.main-image').src = e.target.src;
+    });
+});

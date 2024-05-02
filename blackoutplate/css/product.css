@@ -17,7 +17,8 @@ body {
 
 .main-image {
     width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: contain;
     border-radius: 8px;
 }
 
@@ -64,11 +65,14 @@ body {
     color: #555;
 }
 
-.select-option {
+select {
+    -webkit-appearance: menulist;
+    appearance: menulist;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     padding: 10px;
+    height: 45px;
     margin: 10px 0;
-    width: 95%;
-    height: 35px;
 }
 
 .buy-now {
@@ -111,9 +115,20 @@ body {
     .container {
         flex-direction: column;
         align-items: center;
+
     }
 
     .gallery, .product-details {
         flex: 1 1 100%;
     }
 }
+
+@media (min-width: 768px) {
+    .container {
+        padding-left: 100px;
+        padding-right: 100px;
+        margin-top: 30px;
+    }
+}
+
+
