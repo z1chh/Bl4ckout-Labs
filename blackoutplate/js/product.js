@@ -73,38 +73,14 @@ document.addEventListener('DOMContentLoaded', function() {
     updateShellOptions();
 });
 
-
-
-function nextImage() {
-    const images = document.querySelectorAll('.thumb');
-    const mainImage = document.querySelector('.main-image');
-    let currentIndex = Array.from(images).findIndex(image => image.src === mainImage.src);
-
-    if (currentIndex === images.length - 1) {
-        currentIndex = -1;
-    }
-
-    mainImage.src = images[currentIndex + 1].src;
-}
-
-function previousImage() {
-    const images = document.querySelectorAll('.thumb');
-    const mainImage = document.querySelector('.main-image');
-    let currentIndex = Array.from(images).findIndex(image => image.src === mainImage.src);
-
-    if (currentIndex === 0) {
-        currentIndex = images.length;
-    }
-
-    mainImage.src = images[currentIndex - 1].src;
-}
-
 document.querySelectorAll('.thumb').forEach(thumb => {
     thumb.addEventListener('click', (e) => {
         document.querySelector('.main-image').src = e.target.src;
     });
 });
 
+
+// Fake live viewer
 function updateViewers() {
             const viewers = Math.floor(Math.random() * 10) + 3;
             document.getElementById('viewers-count').textContent = viewers;
