@@ -77,8 +77,7 @@ select {
 
 .buy-now {
     display: inline-block;
-    /*background-color: #007bff;*/
-    background-color: #969696;
+    background-color: #007bff;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -86,15 +85,11 @@ select {
     text-align: center; 
     width: 90%;
 }
-/* REMOVE THIS WHEN WEBSITE GOES LIVE 
-.buy-now:hover {
-    background-color: #0056b3;
-}*/
 
 .buy-now:hover {
-    background-color: #969696;
-    cursor:default;
+    background-color: #0056b3;
 }
+
 
 .accepted-payments {
     width: 30%;
