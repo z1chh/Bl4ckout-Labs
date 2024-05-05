@@ -79,7 +79,7 @@ nav li {
     color: #f8f8f8;
 }
 
-.sidebar li a:hover {
+.hover:hover {
     background-color: #f8f8f8;
     transition: all 0.3s ease-in-out;
 }
