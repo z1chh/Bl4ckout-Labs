@@ -19,24 +19,30 @@ document.addEventListener('DOMContentLoaded', function() {
             case 'na1':
                 priceLabel.textContent = '$165 USD';
                 buyNowLink.href = 'https://buy.stripe.com/bIY6q92Afg8o6oE6op';
+                document.querySelector('.main-image').src = thumbnails[0].src;
                 break;
             case 'na2':
                 priceLabel.textContent = '$239 USD';
                 buyNowLink.href = 'https://buy.stripe.com/5kA8yhgr51du6oEaEG';
+                document.querySelector('.main-image').src = thumbnails[1].src;
                 break;
             case 'eu':
                 priceLabel.textContent = '$174 USD';
                 buyNowLink.href = 'https://buy.stripe.com/5kA01Lb6LbS828o003';
+                document.querySelector('.main-image').src = thumbnails[2].src;
                 break;
             case 'usmoto':
                 priceLabel.textContent = '$140 USD';
                 buyNowLink.href = 'https://buy.stripe.com/dR63dXcaP4pG7sI28c';
+                document.querySelector('.main-image').src = thumbnails[3].src;
                 break;
             default:
                 priceLabel.textContent = '$165 USD';
                 buyNowLink.href = 'https://buy.stripe.com/bIY6q92Afg8o6oE6op';
+                document.querySelector('.main-image').src = thumbnails[0].src;
         }
     }
+    
     // Disable the 'Silicone Shell' option if the 'na1' or 'na2' model is selected
     function updateShellOptions() {
         var model = modelSelect.value;
