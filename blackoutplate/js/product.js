@@ -98,3 +98,11 @@ document.querySelectorAll('.thumb').forEach(thumb => {
         document.querySelector('.main-image').src = e.target.src;
     });
 });
+
+function updateViewers() {
+            const viewers = Math.floor(Math.random() * 10) + 1; // Generates a random number between 1 and 10
+            document.getElementById('viewers-count').textContent = viewers;
+        }
+
+        updateViewers(); // Initialize the viewers count on page load
+        setInterval(updateViewers, 5000); // Update the viewers count every 5000 milliseconds (5 seconds)

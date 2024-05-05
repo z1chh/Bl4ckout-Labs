@@ -71,7 +71,9 @@
             </select>            
             
             <br><br>
-            <h3 style="color: #ff0000;"><i><b>This product will be available in limited quantity only on May 5th at 00:00 EST. </b></i></h3>
+            <div class="live-viewers">
+                <span id="viewers-count"></span> people are watching this product live.
+            </div>
             <br>
             <a href="#" class="buy-now" id="buy-now-link">BUY NOW</a>
             <img src="images/accepted-payments.jpg" alt="Accepted Payments" class="accepted-payments">
@@ -86,9 +88,9 @@
             <ul>
                 <li style="list-style-type: none;"><strong>Sizes and Dimensions:</strong>
                     <ul style="padding: 15px;">
-                        <li>North America Car Plates: 12" x 6" (30 cm x 15 cm) - fits most US and Canadian vehicles</li>
-                        <li>European Car Plates: 20.5" x 4.4" (52 cm x 11 cm) - compatible with standard EU plate sizes</li>
-                        <li>Motorcycle Plates: 7" x 4" (18 cm x 10 cm) - designed for US motorcycles</li>
+                        <li>North America Car Plates: 12" x 6" (30 cm x 15 cm) - fits most US and Canadian vehicles (Silicone Shell Only)</li>
+                        <li>European Car Plates: 20.5" x 4.4" (52 cm x 11 cm) - compatible with standard EU plate sizes (Acrylic Shell Only)</li>
+                        <li>Motorcycle Plates: 7" x 4" (18 cm x 10 cm) - designed for US motorcycles(Acrylic Shell Only)</li>
                     </ul>
                     Clients are responsible for verifying that their license plate fits our product dimensions.
                 </li>
@@ -114,6 +116,15 @@
             <p>Each component is crafted with the highest quality materials and technology to enhance your vehicle’s functionality and aesthetic appeal.</p>
         </div>
     </div>
+    <script>
+        function updateViewers() {
+            const viewers = Math.floor(Math.random() * 10) + 3;
+            document.getElementById('viewers-count').textContent = viewers;
+        }
+
+        updateViewers(); // Initialize the viewers count on page load
+        setInterval(updateViewers, 10000); // Update the viewers count every 5000 milliseconds (5 seconds)
+    </script>
 
     
     
