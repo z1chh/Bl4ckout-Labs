@@ -169,9 +169,9 @@ function fadeInOrOutOnScroll(elementId) {
     fadeInOrOutOnScroll('text1');
     fadeInOrOutOnScroll('text2');
     fadeInOrOutOnScroll('text3');
-    fadeInOrOutOnScroll('text4');
-    fadeInOrOutOnScroll('text5');
-    fadeInOrOutOnScroll('text6');
+    // fadeInOrOutOnScroll('text4');
+    // fadeInOrOutOnScroll('text5');
+    // fadeInOrOutOnScroll('text6');
     fadeInOrOutOnScroll('img1');
     fadeInOrOutOnScroll('img2');
     fadeInOrOutOnScroll('img3');
