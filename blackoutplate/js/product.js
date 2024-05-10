@@ -17,28 +17,28 @@ document.addEventListener('DOMContentLoaded', function() {
         var selectedOption = modelSelect.value;
         switch(selectedOption) {
             case 'na1':
-                priceLabel.textContent = '$165 USD';
-                buyNowLink.href = 'https://buy.stripe.com/bIY6q92Afg8o6oE6op';
+                priceLabel.textContent = '$174 USD';
+                buyNowLink.href = 'https://buy.stripe.com/3csbKtgr58FW8wMdQZ';
                 document.querySelector('.main-image').src = thumbnails[0].src;
                 break;
             case 'na2':
-                priceLabel.textContent = '$239 USD';
-                buyNowLink.href = 'https://buy.stripe.com/5kA8yhgr51du6oEaEG';
+                priceLabel.textContent = '$249 USD';
+                buyNowLink.href = 'https://buy.stripe.com/dR6eWFgr59K014k9AL';
                 document.querySelector('.main-image').src = thumbnails[1].src;
                 break;
             case 'eu':
-                priceLabel.textContent = '$174 USD';
-                buyNowLink.href = 'https://buy.stripe.com/5kA01Lb6LbS828o003';
+                priceLabel.textContent = '$204 USD';
+                buyNowLink.href = 'https://buy.stripe.com/bIY6q9gr5g8oaEU8wI';
                 document.querySelector('.main-image').src = thumbnails[2].src;
                 break;
             case 'usmoto':
-                priceLabel.textContent = '$140 USD';
-                buyNowLink.href = 'https://buy.stripe.com/dR63dXcaP4pG7sI28c';
+                priceLabel.textContent = '$149 USD';
+                buyNowLink.href = 'https://buy.stripe.com/eVaeWF1wbbS85kAdQY';
                 document.querySelector('.main-image').src = thumbnails[3].src;
                 break;
             default:
-                priceLabel.textContent = '$165 USD';
-                buyNowLink.href = 'https://buy.stripe.com/bIY6q92Afg8o6oE6op';
+                priceLabel.textContent = '$174 USD';
+                buyNowLink.href = 'https://buy.stripe.com/3csbKtgr58FW8wMdQZ';
                 document.querySelector('.main-image').src = thumbnails[0].src;
         }
     }
@@ -82,9 +82,9 @@ document.querySelectorAll('.thumb').forEach(thumb => {
 
 // Fake live viewer
 function updateViewers() {
-            const viewers = Math.floor(Math.random() * 10) + 3;
-            document.getElementById('viewers-count').textContent = viewers;
-        }
+    const viewers = Math.floor(Math.random() * 10) + 3;
+    document.getElementById('viewers-count').textContent = viewers;
+}
 
-        updateViewers();
-        setInterval(updateViewers, 5000);
+updateViewers();
+setInterval(updateViewers, 5000);

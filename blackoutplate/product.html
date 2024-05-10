@@ -1,162 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BL4CKOUT Labs</title>
-    <link rel="icon" href="images/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/product.css">
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
     <script src="js/script.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/terms.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/terms.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <script src="/blackoutplate/js/product.js"></script>
-</head>
-<body style="padding-left: 0; padding-right: 0;">
+  </head>
+  <body style="padding-left: 0; padding-right: 0">
     <!-- LOADING EFFECT -->
     <div id="loading">
-        <img src="images/logo.png" alt="Logo" id="loading-logo">
-    </div> 
-    
+      <img src="images/logo.png" alt="Logo" id="loading-logo" />
+    </div>
+
     <!-- NAV BAR -->
     <nav>
-        <ul class="sidebar">
-            <li onclick=hideSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" fill="white"/></svg></button></li>
-            <li class="hover"><a href="index.html">Home</a></li>
-            <li class="hover"><a href="faq.html">FAQ</a></li>
-            <li class="hover"><a href="about.html">About</a></li>
-            <li style="border-bottom: 2px solid grey; margin-bottom: 15px" class="hover">
-                <a href="contact.html">Contact Us</a>
-            </li>
-            <li class="hover"><a href="product.html">BL4CKOUT Plate</a></li>
-        </ul>
-        <ul id="mainnav">
-            <li class="menu-icon navbar" onclick=showSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></button></li>
-            <li class="invisible-spacer"></li>
-            <li><a href="index.html"><img src="images/logo no background.png" style="width: 50px;"></a></li>
-        </ul>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <button class="svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="35"
+              viewBox="0 -960 960 960"
+              width="35"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="hover"><a href="index.html">Home</a></li>
+        <li class="hover"><a href="faq.html">FAQ</a></li>
+        <li class="hover"><a href="about.html">About</a></li>
+        <li
+          style="border-bottom: 2px solid grey; margin-bottom: 15px"
+          class="hover"
+        >
+          <a href="contact.html">Contact Us</a>
+        </li>
+        <li class="hover"><a href="product.html">BL4CKOUT Plate</a></li>
+      </ul>
+      <ul id="mainnav">
+        <li class="menu-icon navbar" onclick="showSidebar()">
+          <button class="svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="35"
+              viewBox="0 -960 960 960"
+              width="35"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="invisible-spacer"></li>
+        <li>
+          <a href="index.html"
+            ><img src="images/logo no background.png" style="width: 50px"
+          /></a>
+        </li>
+      </ul>
     </nav>
-        
+
     <div class="container">
-        <div class="gallery">
-            <img src="images/BLK-US.png" alt="Main Product Image" class="main-image">
-            <div class="thumbnails">
-                <img src="images/BLK-US.png" alt="Thumbnail 1" class="thumb">
-                <img src="images/BLK-US-DOUBLE.png" alt="Thumbnail 2" class="thumb">
-                <img src="images/BLK-EU.png" alt="Thumbnail 3" class="thumb">
-                <img src="images/BLK-moto.png" alt="Thumbnail 4" class="thumb">
-                <img src="images/Box.png" alt="Thumbnail 5" class="thumb">
-            </div>
+      <div class="gallery">
+        <img
+          src="images/BLK-US.png"
+          alt="Main Product Image"
+          class="main-image"
+        />
+        <div class="thumbnails">
+          <img src="images/BLK-US.png" alt="Thumbnail 1" class="thumb" />
+          <img src="images/BLK-US-DOUBLE.png" alt="Thumbnail 2" class="thumb" />
+          <img src="images/BLK-EU.png" alt="Thumbnail 3" class="thumb" />
+          <img src="images/BLK-moto.png" alt="Thumbnail 4" class="thumb" />
+          <img src="images/Box.png" alt="Thumbnail 5" class="thumb" />
         </div>
-        
-        
-        <div class="product-details">
-            <h1 id="product-name">BL4CKOUT Plate</h1>
-            <p class="price" id="product-price">$199.99 USD</p>
-            <p class="description" id="product-description">
-                Transform your vehicle’s appearance and privacy with the touch of a button. With a simple remote control, switch from a transparent to a solid black display to cover your license plate, ensuring privacy and compliance at shows or private events.
-            </p>
-            <h3>Select your size</h3>
-            <select id="product-model" class="select-option">
-                <option value="na1">Car - North America (30 cm x 15 cm)</option>
-                <option value="na2">Car - North America (Front and Back plate) (30 cm x 15 cm)</option>
-                <option value="eu">Car - Europe (52 cm x 11 cm)</option>
-                <option value="usmoto">Motorcycle - US (7" x 4")</option>
-            </select>
-            <h3>Select the shell type</h3>
-            <select id="shell-type" class="select-option">
-                <option value="acrylic" id="acrylic-option">Acrylic Shell</option>
-                <option value="silicone" id="silicone-option">Silicone Shell</option>
-            </select>            
-            
-            <br><br>
-            <div class="live-viewers">
-                <span id="viewers-count"></span> people are watching this product live.
-            </div>
-            <br>
-            <a href="#" class="buy-now" id="buy-now-link">BUY NOW</a>
-            <img src="images/accepted-payments.jpg" alt="Accepted Payments" class="accepted-payments">
+      </div>
+
+      <div class="product-details">
+        <h1 id="product-name">BL4CKOUT Plate</h1>
+        <p class="price" id="product-price">$199.99 USD</p>
+        <p class="description" id="product-description">
+          Transform your vehicle’s appearance and privacy with the touch of a
+          button. With a simple remote control, switch from a transparent to a
+          solid black display to cover your license plate, ensuring privacy and
+          compliance at shows or private events.
+        </p>
+        <h3>Select your size</h3>
+        <select id="product-model" class="select-option">
+          <option value="na1">Car - North America (30 cm x 15 cm)</option>
+          <option value="na2">
+            Car - North America (Front and Back plate) (30 cm x 15 cm)
+          </option>
+          <option value="eu">Car - Europe (52 cm x 11 cm)</option>
+          <option value="usmoto">Motorcycle - US (7" x 4")</option>
+        </select>
+        <h3>Select the shell type</h3>
+        <select id="shell-type" class="select-option">
+          <option value="acrylic" id="acrylic-option">Acrylic Shell</option>
+          <option value="silicone" id="silicone-option">Silicone Shell</option>
+        </select>
+
+        <br /><br />
+        <div class="live-viewers">
+          <span id="viewers-count"></span> people are watching this product
+          live.
         </div>
+        <br />
+        <a href="#" class="buy-now" id="buy-now-link">BUY NOW</a>
+        <img
+          src="images/accepted-payments.jpg"
+          alt="Accepted Payments"
+          class="accepted-payments"
+        />
+      </div>
     </div>
     <div class="container">
-        <div class="additional-info">
-            <h2>Product Specifications and Shipping Details</h2>
-            <br>
-            <p>The BL4CKOUT Plate is available in multiple sizes to ensure a perfect fit for various vehicle types. Each unit features a durable construction with a slight dark tint when transparent, providing privacy while maintaining visibility.</p>
-            <br><br>
-            <ul>
-                <li style="list-style-type: none;"><strong>Sizes and Dimensions:</strong>
-                    <ul style="padding: 15px;">
-                        <li>North America Car Plates: 12" x 6" (30 cm x 15 cm) - fits most US and Canadian vehicles (Silicone Shell Only)</li>
-                        <li>European Car Plates: 20.5" x 4.4" (52 cm x 11 cm) - compatible with standard EU plate sizes (Acrylic Shell Only)</li>
-                        <li>Motorcycle Plates: 7" x 4" (18 cm x 10 cm) - designed for US motorcycles(Acrylic Shell Only)</li>
-                    </ul>
-                    Clients are responsible for verifying that their license plate fits our product dimensions.
-                </li>
-                <br>
-                <li style="list-style-type: none;"><strong>Waterproof Rating:</strong> <br>Each plate is rigorously tested and rated at IP65, ensuring resistance to dust and protection against low-pressure water jets from any direction.</li>
-                <br>
-                <li style="list-style-type: none;"><strong>Shipping:</strong> <br>Enjoy free shipping to North America. Worldwide shipping is also available; however, clients in the EU will be responsible for shipping costs.</li>
+      <div class="additional-info">
+        <h2>Product Specifications and Shipping Details</h2>
+        <br />
+        <p>
+          The BL4CKOUT Plate is available in multiple sizes to ensure a perfect
+          fit for various vehicle types. Each unit features a durable
+          construction with a slight dark tint when transparent, providing
+          privacy while maintaining visibility.
+        </p>
+        <br /><br />
+        <ul>
+          <li style="list-style-type: none">
+            <strong>Sizes and Dimensions:</strong>
+            <ul style="padding: 15px">
+              <li>
+                North America Car Plates: 12" x 6" (30 cm x 15 cm) - fits most
+                US and Canadian vehicles (Silicone Shell Only)
+              </li>
+              <li>
+                European Car Plates: 20.5" x 4.4" (52 cm x 11 cm) - compatible
+                with standard EU plate sizes (Acrylic Shell Only)
+              </li>
+              <li>
+                Motorcycle Plates: 7" x 4" (18 cm x 10 cm) - designed for US
+                motorcycles(Acrylic Shell Only)
+              </li>
             </ul>
-            <br>
-            <p>Our product is designed to withstand various environmental conditions, making it an ideal choice for car enthusiasts around the globe. Confirm your vehicle's compatibility with our dimensions to ensure a perfect fit and optimal performance.</p>
-            <br>
-            <h2>What's Included in Your Purchase?</h2>
-            <ul style="padding: 15px;">
-                <li>1x Acrylic or Silicone Shell, based on your selection</li>
-                <li>1x Acrylic Protector</li>
-                <li>1x BL4CKOUT Display</li>
-                <li>All necessary wiring for installation</li>
-                <li>Set of bolts and washers for secure installation</li>
-                <li>1x Remote Control for easy operation</li>
-                <li>Essential paperwork including installation guide, warranty information, and safety instructions</li>
-                <li>Optional: Double Plate Package for North America (Front and Back) – comes with 2 plates controlled by a single remote</li>
-            </ul>
-            <p>Each component is crafted with the highest quality materials and technology to enhance your vehicle’s functionality and aesthetic appeal.</p>
-        </div>
+            Clients are responsible for verifying that their license plate fits
+            our product dimensions.
+          </li>
+          <br />
+          <li style="list-style-type: none">
+            <strong>Waterproof Rating:</strong> <br />Each plate is rigorously
+            tested and rated at IP65, ensuring resistance to dust and protection
+            against low-pressure water jets from any direction.
+          </li>
+          <br />
+          <li style="list-style-type: none">
+            <strong>Shipping:</strong> <br />Enjoy free shipping to North
+            America in approximately 5-7 business days. Worldwide shipping is also available; however, clients in
+            the EU or outside NA will be responsible for shipping costs.
+          </li>
+        </ul>
+        <br />
+        <p>
+          Our product is designed to withstand various environmental conditions,
+          making it an ideal choice for car enthusiasts around the globe.
+          Confirm your vehicle's compatibility with our dimensions to ensure a
+          perfect fit and optimal performance.
+        </p>
+        <br />
+        <h2>What's Included in Your Purchase?</h2>
+        <ul style="padding: 15px">
+          <li>1x Acrylic or Silicone Shell, based on your selection</li>
+          <li>1x Acrylic Protector</li>
+          <li>1x BL4CKOUT Display</li>
+          <li>All necessary wiring for installation</li>
+          <li>Set of bolts and washers for secure installation</li>
+          <li>1x Remote Control for easy operation</li>
+          <li>
+            Essential paperwork including installation guide, warranty
+            information, and safety instructions
+          </li>
+          <li>
+            Optional: Double Plate Package for North America (Front and Back) –
+            comes with 2 plates controlled by a single remote
+          </li>
+        </ul>
+        <p>
+          Each component is crafted with the highest quality materials and
+          technology to enhance your vehicle’s functionality and aesthetic
+          appeal.
+        </p>
+      </div>
     </div>
     <script>
-        function updateViewers() {
-            const viewers = Math.floor(Math.random() * 10) + 3;
-            document.getElementById('viewers-count').textContent = viewers;
-        }
+      function updateViewers() {
+        const viewers = Math.floor(Math.random() * 10) + 3;
+        document.getElementById("viewers-count").textContent = viewers;
+      }
 
-        updateViewers(); // Initialize the viewers count on page load
-        setInterval(updateViewers, 10000); // Update the viewers count every 5000 milliseconds (5 seconds)
+      updateViewers(); // Initialize the viewers count on page load
+      setInterval(updateViewers, 10000); // Update the viewers count every 5000 milliseconds (5 seconds)
     </script>
 
-    
-    
     <!-- Footer -->
     <footer>
-        <div class="footer">
-            <div class="row">
-                <a href="https://www.tiktok.com/@bl4ckoutlabs"><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3;"></i></a>
-                <a href="https://www.instagram.com/bl4ckoutplates/"><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3;"></i></a>
-                <a href="contact.html"><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3;"></i></a>
-            </div>
-            
-            <div class="row">
-                <ul>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="terms.html">Terms & Conditions</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li>Become An Ambassador - Currently not available</li> 
-                </ul>
-            </div>
-            
-            <div class="row">
-                BL4CKOUT Plate, made by enthusiasts, for enthusiasts.
-            </div>
-
-            <div the="row">
-                BL4CKOUT Labs Copyright © 2024 - All rights reserved
-            </div>
+      <div class="footer">
+        <div class="row">
+          <a href="https://www.tiktok.com/@bl4ckoutlabs"
+            ><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3"></i
+          ></a>
+          <a href="https://www.instagram.com/bl4ckoutplates/"
+            ><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3"></i
+          ></a>
+          <a href="contact.html"
+            ><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3"></i
+          ></a>
         </div>
+
+        <div class="row">
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li>Become An Ambassador - Currently not available</li>
+          </ul>
+        </div>
+
+        <div class="row">
+          BL4CKOUT Plate, made by enthusiasts, for enthusiasts.
+        </div>
+
+        <div the="row">
+          BL4CKOUT Labs Copyright © 2024 - All rights reserved
+        </div>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
