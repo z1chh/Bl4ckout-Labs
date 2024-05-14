@@ -27,8 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.main-image').src = thumbnails[1].src;
                 break;
             case 'eu':
-                priceLabel.textContent = '$204 USD';
-                buyNowLink.href = 'https://buy.stripe.com/bIY6q9gr5g8oaEU8wI';
+                priceLabel.textContent = '$209 USD';
+                buyNowLink.href = 'https://buy.stripe.com/28o9CleiX9K000g5kx';
                 document.querySelector('.main-image').src = thumbnails[2].src;
                 break;
             case 'usmoto':

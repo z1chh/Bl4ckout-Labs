@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BL4CKOUT Labs</title>
+        <link rel="icon" href="images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/ambassador-form.css">
+        <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDW398NS6Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-MDW398NS6Q');
+  </script>
+  <body>
+      <!-- LOADING EFFECT -->         
+      <div id="loading">
+        <img src="images/logo.png" alt="Logo" id="loading-logo" />
+      </div>
+  
+      <!-- NAV BAR -->
+      <nav>
+        <ul class="sidebar">
+          <li onclick="hideSidebar()">
+            <button class="svg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="35"
+                viewBox="0 -960 960 960"
+                width="35"
+              >
+                <path
+                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </li>
+          <li class="hover"><a href="index.html">Home</a></li>
+          <li class="hover"><a href="faq.html">FAQ</a></li>
+          <li class="hover"><a href="about.html">About</a></li>
+          <li
+            style="border-bottom: 2px solid grey; margin-bottom: 15px"
+            class="hover"
+          >
+            <a href="contact.html">Contact Us</a>
+          </li>
+          <li class="hover"><a href="product.html">BL4CKOUT Plate</a></li>
+        </ul>
+        <ul id="mainnav">
+          <li class="menu-icon navbar" onclick="showSidebar()">
+            <button class="svg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="35"
+                viewBox="0 -960 960 960"
+                width="35"
+              >
+                <path
+                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                  fill="white"
+                />
+              </svg>
+            </button>
+          </li>
+          <li class="invisible-spacer"></li>
+          <li>
+            <a href="index.html"
+              ><img src="images/logo no background.png" style="width: 50px"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <div id="form-background">
+        <div class="form-container">
+          <div style="display: flex; align-items: center; justify-content: center;">
+            <img src="images/logo.png" alt="Logo" style="width: 40px; margin-right: 10px;"/>
+            <h3>Join the BL4CKOUT COMMUNITY Ambassador Program</h3>
+          </div>
+        
+          <form id="ambassadorForm" style="margin-top: 50px;" action="https://formspree.io/f/mbjnbayw" method="POST">
+              <label for="fullName">Full Name*</label>
+              <input type="text" id="fullName" name="Full Name" placeholder="Enter your full name" required>
+              <br>
+              <label for="email">Email Address*</label>
+              <input type="email" id="email" name="Email" placeholder="Enter your email address" required>
+              <br>
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="Phone" placeholder="Enter your phone number">
+              
+              <fieldset style="padding: 15px;">
+                  <legend>Social Media Handles*</legend>
+                  <label for="fullName">Instagram</label>
+                  <input type="text" id="Instagram" name="Instagram" placeholder="Enter your Instagram @ handle" required>
+                  <br>
+                  <label for="email">Tiktok</label>
+                  <input type="text" id="TikTok" name="TikTok" placeholder="Enter your TikTok @ handle" required>
+                  <br>
+                  <label for="phone">Youtube</label>
+                  <input type="text" id="Youtube" name="Youtube" placeholder="Enter the link to your Youtube channel">
+              </fieldset>
+              <br>
+              <label for="phone">Total number of followers</label>
+              <input type="tel" id="phone" name="Total Number of Followers" placeholder="Enter the total number of followers combined">
+              <br>
+              <label for="motivation">Motivation*</label>
+              <textarea id="motivation" name="Motivation" required></textarea>
+              <br>              
+              <label for="expectations">What do you expect from this program?</label>
+              <textarea id="expectations" name="Expectations" style="height: 50px;"></textarea>
+              
+              <button class="button" type="submit">Submit Application</button>
+          </form>
+        </div>
+      </div>
+    
+      <script src="js/ambassador-form.js"></script>
+  
+      <!-- Footer -->
+      <footer>
+        <div class="footer">
+          <div class="row">
+            <a href="https://www.tiktok.com/@bl4ckoutlabs"
+              ><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3"></i
+            ></a>
+            <a href="https://www.instagram.com/bl4ckoutplates/"
+              ><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3"></i
+            ></a>
+            <a href="contact.html"
+              ><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3"></i
+            ></a>
+          </div>
+  
+          <div class="row">
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <!-- <li><a href="/bl4ckoutlabs.html">Our Products</a></li> -->
+              <li><a href="terms.html">Terms & Conditions</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="ambassador.html">Become An Ambassador</a></li>
+            </ul>
+          </div>
+  
+          <div class="row">
+            BL4CKOUT Plate, made by enthusiasts, for enthusiasts.
+          </div>
+  
+          <div class="row">
+            BL4CKOUT Labs Copyright © 2024 - All rights reserved
+          </div>
+        </div>
+      </footer>
+    </body>  
+</html>

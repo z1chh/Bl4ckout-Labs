@@ -1,7 +1,11 @@
 // Loading effect
 document.addEventListener('DOMContentLoaded', (event) => {
-  const minimumDisplay = 1500;
+  let minimumDisplay = 1500;
   const loadingScreen = document.getElementById('loading');
+  
+  if (document.body.id === "longer-loading") {
+    minimumDisplay = 2700;
+  }
 
   setTimeout(() => {
     if (loadingScreen) {
@@ -12,6 +16,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }
   }, minimumDisplay);
 });
+
 
 // NavBar becomes black opaque when user scrolls
 window.addEventListener('scroll', function() {

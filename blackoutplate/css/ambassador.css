@@ -1,0 +1,158 @@
+body, html {
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+.fixed-background {
+    background-image: url('/blackoutplate/images/Nissan-GT-R-004.jpg');
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    height: 500px;
+    width: 100%;
+    font-size: x-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-align: center;
+}
+
+.header {
+    background: url('image_path.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 20px;
+    color: white;
+}
+
+.content, .form-container {
+    padding: 20px;
+    margin-top: 15px;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.step {
+    margin-top: 20px;
+    display: inline-block;
+    width: 170px;
+    vertical-align: top;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.step h1 {
+    background-color: aqua;
+    border-radius: 100%;
+}
+
+.step img {
+    width: 70px;
+}
+
+.button {
+    background-color: #007bff;
+    color: #f8f8f8;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    font-weight: 300;
+    font-size: medium;
+    text-decoration: none;
+    margin-top: 70px;
+}
+
+.button:hover {
+    background-color: rgb(47, 78, 255);
+}
+
+input, textarea, select {
+    width: 90%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.faq-container {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 80px;
+}
+
+@media (max-width: 768px) {
+    .step, .form-step {
+        display: block;
+        width: auto;
+        margin: 20px auto;
+    }
+    .header h1 {
+        font-size: 34px;
+    }
+    .header p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .info-title {
+        height:40px;
+    }
+    .info-content {
+        margin-bottom: 0;
+    }
+}
+
+/* FAQ */
+.info-item.active .arrow {
+    transform: rotate(-90deg);
+}
+
+.info-item {
+    margin-bottom: 5px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.info-item.active .info-content {
+    display: block;
+}
+
+.info-toggle {
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: transparent; 
+    border: none; 
+    height: 70px;
+    color: #000000;
+}
+
+.info-title {
+    flex-grow: 1;
+    font-size: large;
+}
+
+.arrow {
+    display: block;
+    transition: transform 0.3s ease;
+    width: 10px;
+}
+
+.info-content {
+    overflow: hidden; 
+    max-height: 0; 
+    transition: max-height 0.3s ease;
+    padding-left: 10px;
+    font-size: medium;
+    text-align: justify;
+}
+
+.info-item.active .info-content {
+    max-height: 500px;
+}

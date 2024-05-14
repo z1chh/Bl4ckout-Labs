@@ -28,7 +28,16 @@
     />
     <script src="/blackoutplate/js/product.js"></script>
   </head>
-  <body style="padding-left: 0; padding-right: 0">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDW398NS6Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-MDW398NS6Q');
+    </script>
+  <body style="padding-left: 0; padding-right: 0" id="longer-loading">
     <!-- LOADING EFFECT -->
     <div id="loading">
       <img src="images/logo.png" alt="Logo" id="loading-logo" />
@@ -100,7 +109,7 @@
           <img src="images/BLK-US-DOUBLE.png" alt="Thumbnail 2" class="thumb" />
           <img src="images/BLK-EU.png" alt="Thumbnail 3" class="thumb" />
           <img src="images/BLK-moto.png" alt="Thumbnail 4" class="thumb" />
-          <img src="images/Box.png" alt="Thumbnail 5" class="thumb" />
+          <!--<img src="images/Box.png" alt="Thumbnail 5" class="thumb" />-->
         </div>
       </div>
 
@@ -115,12 +124,19 @@
         </p>
         <h3>Select your size</h3>
         <select id="product-model" class="select-option">
-          <option value="na1">Car - North America (30 cm x 15 cm)</option>
-          <option value="na2">
-            Car - North America (Front and Back plate) (30 cm x 15 cm)
+          <option value="na1">
+            Car - North America (Back plate) (30 cm x 15 cm)
           </option>
-          <option value="eu">Car - Europe (52 cm x 11 cm)</option>
-          <option value="usmoto">Motorcycle - US (7" x 4")</option>
+          <option value="na2" disabled>
+            Car - North America (Front and Back plate) (30 cm x 15 cm) - Sold
+            Out
+          </option>
+          <option value="eu" disabled>
+            Car - Europe (52 cm x 11 cm) - Sold Out
+          </option>
+          <option value="usmoto">
+            Motorcycle - US (18 cm x 10 cm / 7" x 4")
+          </option>
         </select>
         <h3>Select the shell type</h3>
         <select id="shell-type" class="select-option">
@@ -182,8 +198,9 @@
           <br />
           <li style="list-style-type: none">
             <strong>Shipping:</strong> <br />Enjoy free shipping to North
-            America in approximately 5-7 business days. Worldwide shipping is also available; however, clients in
-            the EU or outside NA will be responsible for shipping costs.
+            America in approximately 5-7 business days. Worldwide shipping is
+            also available; however, clients in the EU or outside NA will be
+            responsible for shipping costs. Express shipping is also available.
           </li>
         </ul>
         <br />
@@ -227,6 +244,7 @@
       updateViewers(); // Initialize the viewers count on page load
       setInterval(updateViewers, 10000); // Update the viewers count every 5000 milliseconds (5 seconds)
     </script>
+    
 
     <!-- Footer -->
     <footer>
@@ -246,9 +264,10 @@
         <div class="row">
           <ul>
             <li><a href="contact.html">Contact Us</a></li>
+            <!-- <li><a href="/bl4ckoutlabs.html">Our Products</a></li> -->
             <li><a href="terms.html">Terms & Conditions</a></li>
             <li><a href="about.html">About Us</a></li>
-            <li>Become An Ambassador - Currently not available</li>
+            <li><a href="ambassador.html">Become An Ambassador</a></li>
           </ul>
         </div>
 
@@ -256,7 +275,7 @@
           BL4CKOUT Plate, made by enthusiasts, for enthusiasts.
         </div>
 
-        <div the="row">
+        <div class="row">
           BL4CKOUT Labs Copyright © 2024 - All rights reserved
         </div>
       </div>

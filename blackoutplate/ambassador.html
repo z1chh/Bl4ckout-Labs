@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BL4CKOUT Labs</title>
+        <link rel="icon" href="images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/ambassador.css">
+        <script src="js/script.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+      <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MDW398NS6Q"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MDW398NS6Q');
+    </script>
+  <body>
+    <!-- LOADING EFFECT -->
+    <div id="loading">
+      <img src="images/logo.png" alt="Logo" id="loading-logo" />
+    </div>
+
+    <!-- NAV BAR -->
+    <nav>
+      <ul class="sidebar">
+        <li onclick="hideSidebar()">
+          <button class="svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="35"
+              viewBox="0 -960 960 960"
+              width="35"
+            >
+              <path
+                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="hover"><a href="index.html">Home</a></li>
+        <li class="hover"><a href="faq.html">FAQ</a></li>
+        <li class="hover"><a href="about.html">About</a></li>
+        <li
+          style="border-bottom: 2px solid grey; margin-bottom: 15px"
+          class="hover"
+        >
+          <a href="contact.html">Contact Us</a>
+        </li>
+        <li class="hover"><a href="product.html">BL4CKOUT Plate</a></li>
+      </ul>
+      <ul id="mainnav">
+        <li class="menu-icon navbar" onclick="showSidebar()">
+          <button class="svg">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="35"
+              viewBox="0 -960 960 960"
+              width="35"
+            >
+              <path
+                d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                fill="white"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="invisible-spacer"></li>
+        <li>
+          <a href="index.html"
+            ><img src="images/logo no background.png" style="width: 50px"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="fixed-background" style="font-weight: 900; color: white;">
+        <div class="header">
+            <h1>Ambassador Program</h1>
+            <p>Become a voice for our brand and enjoy exclusive benefits.</p>
+            <br><br><br>
+            <a href="../blackoutplate/ambassador-form.html" class="button">Apply Now</a>
+        </div>
+    </div>
+
+    <div class="content">
+        <div style="max-width: 900px; width: 100%; margin: auto">
+            <h2>Join the BL4CKOUT Community Ambassador Program</h2>
+            <br><br>
+            <p style="font-size: medium;">Since launching our innovative BL4CKOUT Plate, we've empowered car enthusiasts worldwide to maintain their privacy in style, and to express their creativity through what we all love: our vehicles.</p>
+            <br><br>
+            <p style="font-size: medium;">As a BL4CKOUT Ambassador, you'll have the opportunity to showcase our revolutionary products through your content, offering your followers a unique blend of security and style right at their fingertips.</p>
+        </div>
+        
+        <h3 style="margin-top: 100px; width: 100%">How it works</h3>
+        <div class="step">
+            <img src="/blackoutplate/images/1.png">
+            <h4>Apply</h4>
+            <p>Start your journey by applying through the form below.</p>
+        </div>
+        <div class="step">
+            <img src="/blackoutplate/images/2.png">
+            <h4>Get Your Code</h4>
+            <p>Get your own customized 10% discount code.</p>
+        </div>
+        <div class="step">
+            <img src="/blackoutplate/images/3.png">
+            <h4>Earn Sales</h4>
+            <p>Get commissions on every sales made with your code.</p>
+        </div>
+        <div class="step">
+            <img src="/blackoutplate/images/4.png">
+            <h4>Get Rewarded</h4>
+            <p>Get biweekly payments directly to your bank.</p>
+        </div>
+        <br><br><br><br><br>
+        <h3><i>Reward Yourself While Doing What You Love</i></h3>
+        <br><br>
+        <a href="../blackoutplate/ambassador-form.html" class="button">Apply Now</a>
+        
+        <div class="faq-container">
+            <!-- FAQ 1 -->
+            <div class="info-item">
+                <button class="info-toggle">
+                    <p class="info-title">Do ambassadors automatically receive a free product upon acceptance?</p>
+                    <span class="arrow">&#9666;</span>
+                </button>
+                <div class="info-content">
+                    <p>Acceptance into our Ambassador Program does not guarantee a free product. Based on our evaluation of each application, selected ambassadors may either receive a product for free or obtain a minimum discount of 10%. Regardless of the outcome, every ambassador is provided with a personalized discount code that offers 10% off to their followers.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="info-item">
+                <button class="info-toggle">
+                    <p class="info-title">What are the payment terms for ambassadors?</p>
+                    <span class="arrow">&#9666;</span>
+                </button>
+                <div class="info-content">
+                    <p>Payments are issued biweekly via PayPal, based on the commissions earned through the sales generated by your custom discount code. Each ambassador starts with a commission rate of 5% of the profits generated, with potential increases depending on sales performance.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="info-item">
+                <button class="info-toggle">
+                    <p class="info-title">What values does the BL4CKOUT brand represent?</p>
+                    <span class="arrow">&#9666;</span>
+                </button>
+                <div class="info-content">
+                    <p>At BL4CKOUT, we are driven by a passion for automotive innovation and expression. We empower car and motorcycle enthusiasts to explore creativity in vehicle modification, embrace the thrill of motorsports, and uphold the freedom of personal expression. Our ambassadors are vital in representing these core values and inspiring their audiences.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="info-item">
+                <button class="info-toggle">
+                    <p class="info-title">How long does the application process take?</p>
+                    <span class="arrow">&#9666;</span>
+                </button>
+                <div class="info-content">
+                    <p>Applications are typically processed within 7 business days. However, during peak times, the review process may take longer. We appreciate your patience and enthusiasm for joining our community.</p>
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="info-item">
+                <button class="info-toggle">
+                    <p class="info-title">What additional benefits does the Ambassador Program offer?</p>
+                    <span class="arrow">&#9666;</span>
+                </button>
+                <div class="info-content">
+                    <p>Apart from earning commissions, our ambassadors gain early access to new product launches and can be featured on our social media platforms. We are constantly innovating, and top performers in our program will have the exclusive opportunity to experience and promote groundbreaking products in the car modification industry.</p>
+                </div>
+            </div>
+                </div>
+            <p style="margin-top: 80px;"><i><a href="contact.html" style="text-decoration: none;">Contact us</a></i> at support@bl4ckoutlabs.com for more information.</p>
+        </div>        
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+          <div class="row">
+            <a href="https://www.tiktok.com/@bl4ckoutlabs"
+              ><i class="fa-brands fa-tiktok fa-sm" style="color: #a3a3a3"></i
+            ></a>
+            <a href="https://www.instagram.com/bl4ckoutplates/"
+              ><i class="fa-brands fa-instagram fa-sm" style="color: #a3a3a3"></i
+            ></a>
+            <a href="contact.html"
+              ><i class="fa-regular fa-envelope fa-sm" style="color: #a3a3a3"></i
+            ></a>
+          </div>
+  
+          <div class="row">
+            <ul>
+              <li><a href="contact.html">Contact Us</a></li>
+              <!-- <li><a href="/bl4ckoutlabs.html">Our Products</a></li> -->
+              <li><a href="terms.html">Terms & Conditions</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="ambassador.html">Become An Ambassador</a></li>
+            </ul>
+          </div>
+  
+          <div class="row">
+            BL4CKOUT Plate, made by enthusiasts, for enthusiasts.
+          </div>
+  
+          <div class="row">
+            BL4CKOUT Labs Copyright © 2024 - All rights reserved
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>

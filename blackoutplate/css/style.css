@@ -425,6 +425,10 @@ nav a {
     padding-top: 100px;
 }
 
+.index-text {
+    font-size: larger;
+}
+
 /* Footer CSS */
 .footer {
     background:#000;
@@ -433,6 +437,8 @@ nav a {
     text-align:center;
     margin-top: 100px;
     margin-bottom: 0;
+    padding-bottom: 0;
+    bottom: 0;
 }
     
 .footer .row {
@@ -479,6 +485,9 @@ nav a {
     }
     .footer .row a i {
     margin:0% 3%;
+    }
+    .index-text {
+        font-size: medium;
     }
 }
  
