@@ -32,49 +32,8 @@
   
       <!-- NAV BAR -->
       <nav>
-        <ul class="sidebar">
-          <li onclick="hideSidebar()">
-            <button class="svg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="35"
-                viewBox="0 -960 960 960"
-                width="35"
-              >
-                <path
-                  d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-          </li>
-          <li class="hover"><a href="index.html">Home</a></li>
-          <li class="hover"><a href="faq.html">FAQ</a></li>
-          <li class="hover"><a href="about.html">About</a></li>
-          <li
-            style="border-bottom: 2px solid grey; margin-bottom: 15px"
-            class="hover"
-          >
-            <a href="contact.html">Contact Us</a>
-          </li>
-          <li class="hover"><a href="product.html">BL4CKOUT Plate</a></li>
-        </ul>
+        
         <ul id="mainnav">
-          <li class="menu-icon navbar" onclick="showSidebar()">
-            <button class="svg">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                height="35"
-                viewBox="0 -960 960 960"
-                width="35"
-              >
-                <path
-                  d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
-          </li>
           <li class="invisible-spacer"></li>
           <li>
             <a href="index.html"
@@ -101,11 +60,11 @@
               <input type="tel" id="phone" name="Phone" placeholder="Enter your phone number">
               
               <fieldset style="padding: 15px;">
-                  <legend>Social Media Handles*</legend>
-                  <label for="fullName">Instagram</label>
+                  <legend>Social Media Handles</legend>
+                  <label for="fullName">Instagram*</label>
                   <input type="text" id="Instagram" name="Instagram" placeholder="Enter your Instagram @ handle" required>
                   <br>
-                  <label for="email">Tiktok</label>
+                  <label for="email">Tiktok*</label>
                   <input type="text" id="TikTok" name="TikTok" placeholder="Enter your TikTok @ handle" required>
                   <br>
                   <label for="phone">Youtube</label>
@@ -115,12 +74,17 @@
               <label for="phone">Total number of followers</label>
               <input type="tel" id="phone" name="Total Number of Followers" placeholder="Enter the total number of followers combined">
               <br>
+              <label for="phone">Paypal Email*</label>
+              <input type="tel" id="Paypal" name="Paypal" placeholder="Enter the email address of your Paypal" required>
+              <br>
               <label for="motivation">Motivation*</label>
               <textarea id="motivation" name="Motivation" required></textarea>
               <br>              
               <label for="expectations">What do you expect from this program?</label>
               <textarea id="expectations" name="Expectations" style="height: 50px;"></textarea>
-              
+              <br><br>
+              <input type="checkbox" required style="margin-right: 5px;" name="Acceptation of terms">By using our services, you agree to our <a href="terms.html" style="text-decoration: none; color: black; font-style: italic" target="_blank">Terms of Service</a> and <a href="terms.html" style="text-decoration: none; color: black; font-style: italic" target="_blank">Privacy Policy</a>.
+
               <button class="button" type="submit">Submit Application</button>
           </form>
         </div>
