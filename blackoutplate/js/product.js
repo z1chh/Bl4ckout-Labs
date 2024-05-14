@@ -81,10 +81,3 @@ document.querySelectorAll('.thumb').forEach(thumb => {
 
 
 // Fake live viewer
-function updateViewers() {
-    const viewers = Math.floor(Math.random() * 10) + 3;
-    document.getElementById('viewers-count').textContent = viewers;
-}
-
-updateViewers();
-setInterval(updateViewers, 5000);

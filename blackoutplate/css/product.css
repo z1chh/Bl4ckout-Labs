@@ -48,6 +48,7 @@ body {
     display: flex;      
     flex-direction: column; 
     height: 450px;
+    max-width: 100%;
 }
 
 #product-name {
@@ -73,6 +74,7 @@ select {
     padding: 10px;
     height: 45px;
     margin: 10px 0;
+    color: black;
 }
 
 .buy-now {
@@ -83,7 +85,7 @@ select {
     text-decoration: none;
     border-radius: 5px;
     text-align: center; 
-    width: 90%;
+    max-width: 100%;
 }
 
 .buy-now:hover {
@@ -137,4 +139,25 @@ select {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     font-size: 18px;
+    color: red;
+}
+
+.pulsation {
+    animation: pulsate 2s infinite ease-in-out;
+    background-color: transparent;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.01);
+        opacity: 0.9;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
