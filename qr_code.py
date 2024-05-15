@@ -2,7 +2,7 @@ import qrcode
 from PIL import Image, ImageDraw
 
 # Data to be encoded
-data = "https://www.bl4ckoutlabs.com/"
+data = "https://bl4ckoutlabs.com/blackoutplate/ambassador.html"
 
 # Generate QR code
 qr = qrcode.QRCode(
@@ -54,3 +54,4 @@ if round_corners:
 
     # Save the final image
     img_rounded.save("rounded_qr_code.png")
+    print("qr code created")
