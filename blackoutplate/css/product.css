@@ -66,6 +66,11 @@ body {
     color: #555;
 }
 
+#sold-out {
+    font-size: large;
+    color: red;
+}
+
 select {
     -webkit-appearance: menulist;
     appearance: menulist;
@@ -90,6 +95,12 @@ select {
 
 .buy-now:hover {
     background-color: #0056b3;
+}
+
+.disabled-link {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.5;
 }
 
 

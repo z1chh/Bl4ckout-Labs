@@ -1,11 +1,12 @@
-// Changes the price of the product and the link of the buy-now button based on the selected model
 document.addEventListener('DOMContentLoaded', function() {
     var thumbnails = document.querySelectorAll('.thumb');
     var modelSelect = document.getElementById('product-model');
     var priceLabel = document.getElementById('product-price');
+    var soldout = document.getElementById('sold-out');
     var acrylicOption = document.getElementById('acrylic-option');
     var siliconeOption = document.getElementById('silicone-option');
     var buyNowLink = document.getElementById('buy-now-link');
+    var productTitle = document.getElementById('product-name')
 
     function onThumbnailClick(event) {
         event.preventDefault();
@@ -17,33 +18,46 @@ document.addEventListener('DOMContentLoaded', function() {
         var selectedOption = modelSelect.value;
         switch(selectedOption) {
             case 'na1':
+                productTitle.textContent = 'BL4CKOUT PLATE - North America';
+                soldout.textContent = ''; // If it's in stock, leave '' empty, otherwise, write 'SOLD OUT'
                 priceLabel.textContent = '$174 USD';
                 buyNowLink.href = 'https://buy.stripe.com/3csbKtgr58FW8wMdQZ';
                 document.querySelector('.main-image').src = thumbnails[0].src;
+                buyNowLink.classList.remove('disabled-link');
                 break;
             case 'na2':
+                productTitle.textContent = 'BL4CKOUT PLATE - North America Dual Pack';
+                soldout.textContent = 'SOLD OUT';
                 priceLabel.textContent = '$289 USD';
                 buyNowLink.href = 'https://buy.stripe.com/fZedSBeiX1dufZebIW';
                 document.querySelector('.main-image').src = thumbnails[1].src;
+                buyNowLink.classList.add('disabled-link');
                 break;
             case 'eu':
+                productTitle.textContent = 'BL4CKOUT PLATE - Europe';
+                soldout.textContent = 'SOLD OUT';
                 priceLabel.textContent = '$209 USD';
                 buyNowLink.href = 'https://buy.stripe.com/28o9CleiX9K000g5kx';
                 document.querySelector('.main-image').src = thumbnails[2].src;
+                buyNowLink.classList.add('disabled-link');
                 break;
             case 'usmoto':
+                productTitle.textContent = 'BL4CKOUT PLATE - Motorcycle';
+                soldout.textContent = 'SOLD OUT';
                 priceLabel.textContent = '$149 USD';
                 buyNowLink.href = 'https://buy.stripe.com/eVaeWF1wbbS85kAdQY';
                 document.querySelector('.main-image').src = thumbnails[3].src;
+                buyNowLink.classList.add('disabled-link');
                 break;
             default:
+                soldout.textContent = '';
                 priceLabel.textContent = '$174 USD';
                 buyNowLink.href = 'https://buy.stripe.com/3csbKtgr58FW8wMdQZ';
                 document.querySelector('.main-image').src = thumbnails[0].src;
+                buyNowLink.classList.remove('disabled-link');
         }
     }
     
-    // Disable the 'Silicone Shell' option if the 'na1' or 'na2' model is selected
     function updateShellOptions() {
         var model = modelSelect.value;
         if (model === 'na1' || model === 'na2') {
@@ -78,4 +92,3 @@ document.querySelectorAll('.thumb').forEach(thumb => {
         document.querySelector('.main-image').src = e.target.src;
     });
 });
-
