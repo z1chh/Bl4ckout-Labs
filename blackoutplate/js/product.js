@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.querySelector('.main-image').src = thumbnails[0].src;
                 break;
             case 'na2':
-                priceLabel.textContent = '$249 USD';
-                buyNowLink.href = 'https://buy.stripe.com/dR6eWFgr59K014k9AL';
+                priceLabel.textContent = '$289 USD';
+                buyNowLink.href = 'https://buy.stripe.com/fZedSBeiX1dufZebIW';
                 document.querySelector('.main-image').src = thumbnails[1].src;
                 break;
             case 'eu':
