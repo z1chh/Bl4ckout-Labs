@@ -79,5 +79,3 @@ document.querySelectorAll('.thumb').forEach(thumb => {
     });
 });
 
-
-// Fake live viewer
