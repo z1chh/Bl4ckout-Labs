@@ -90,6 +90,7 @@
           compliance at shows or private events.
         </p>
         <h3>Select your size</h3>
+        <!-- Enlever Sold out si en stock, et aller voir dans product.js-->
         <select id="product-model" class="select-option">
           <option value="na1">
             Car - North America (30 cm x 15 cm)
@@ -101,7 +102,7 @@
             Car - Europe (52 cm x 11 cm) - Sold Out
           </option>
           <option value="usmoto">
-            Motorcycle - (7" x 4") - Sold Out
+            Motorcycle - (7" x 4")
           </option>
         </select>
         <h3>Select the shell type</h3>
@@ -164,8 +165,8 @@
           <br />
           <li style="list-style-type: none">
             <strong>Shipping:</strong> <br />Enjoy free shipping to North
-            America in approximately 5-7 business days. Worldwide shipping is
-            also available; however, clients in the EU or outside NA will be
+            America in approximately 9-12 business days. Worldwide shipping is
+            also available; however, some clients in EU or outside NA will be
             responsible for shipping costs. Express shipping is also available.
           </li>
         </ul>
@@ -204,7 +205,7 @@
     </div>
     <script>
       function updateViewers() {
-        const viewers = Math.floor(Math.random() * 10) + 18;
+        const viewers = Math.floor(Math.random() * 10) + 8;
         document.getElementById("viewers-count").textContent = viewers;
       }
 

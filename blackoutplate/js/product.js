@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updatePrice() {
         var selectedOption = modelSelect.value;
+        // If one item is sold out, you have to:
+        // - Add Sold Out in the soldout.textContent
+        // - Change buyNowLink.classList.remove, change .remove to .add
+        // - Go in product.html and remove - Sold Out from the select option
         switch(selectedOption) {
             case 'na1':
                 productTitle.textContent = 'BL4CKOUT PLATE - North America';
@@ -23,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 priceLabel.textContent = '$174 USD';
                 buyNowLink.href = 'https://buy.stripe.com/3csbKtgr58FW8wMdQZ';
                 document.querySelector('.main-image').src = thumbnails[0].src;
-                buyNowLink.classList.remove('disabled-link');
+                buyNowLink.classList.remove('disabled-link'); // change .remove to .add if it's sold out
                 break;
             case 'na2':
                 productTitle.textContent = 'BL4CKOUT PLATE - North America Dual Pack';
@@ -43,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'usmoto':
                 productTitle.textContent = 'BL4CKOUT PLATE - Motorcycle';
-                soldout.textContent = 'SOLD OUT';
+                soldout.textContent = '1 REMAINING';
                 priceLabel.textContent = '$149 USD';
                 buyNowLink.href = 'https://buy.stripe.com/eVaeWF1wbbS85kAdQY';
                 document.querySelector('.main-image').src = thumbnails[3].src;
-                buyNowLink.classList.add('disabled-link');
+                buyNowLink.classList.remove('disabled-link');
                 break;
             default:
                 soldout.textContent = '';
