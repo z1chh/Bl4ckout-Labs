@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 break;
             case 'usmoto':
                 productTitle.textContent = 'BL4CKOUT PLATE - Motorcycle';
-                soldout.textContent = '1 REMAINING';
+                soldout.textContent = 'SOLD OUT';
                 priceLabel.textContent = '$149 USD';
                 buyNowLink.href = 'https://buy.stripe.com/eVaeWF1wbbS85kAdQY';
                 document.querySelector('.main-image').src = thumbnails[3].src;
-                buyNowLink.classList.remove('disabled-link');
+                buyNowLink.classList.add('disabled-link');
                 break;
             default:
                 soldout.textContent = '';
