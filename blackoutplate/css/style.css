@@ -287,6 +287,13 @@ nav a {
     width: 100%; 
 }
 
+.info-content video {
+    max-width: 550px;
+    height: auto;
+    width: 100%;
+}
+
+
 .introduction {
     text-align: center;
     margin-top: 15%;
