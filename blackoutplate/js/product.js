@@ -22,36 +22,68 @@ document.addEventListener('DOMContentLoaded', function() {
         // - Go in product.html and remove - Sold Out from the select option
         switch(selectedOption) {
             case 'na1':
-                productTitle.textContent = 'BL4CKOUT PLATE - North America';
+                productTitle.textContent = 'BL4CKOUT PLATE - North America V1';
                 soldout.textContent = ''; // If it's in stock, leave '' empty, otherwise, write 'SOLD OUT'
                 priceLabel.textContent = '$174 USD';
                 buyNowLink.href = 'https://buy.stripe.com/3csbKtgr58FW8wMdQZ';
                 document.querySelector('.main-image').src = thumbnails[0].src;
                 buyNowLink.classList.remove('disabled-link'); // change .remove to .add if it's sold out
                 break;
-            case 'na2':
-                productTitle.textContent = 'BL4CKOUT PLATE - North America Dual Pack';
-                soldout.textContent = 'SOLD OUT';
-                priceLabel.textContent = '$289 USD';
-                buyNowLink.href = 'https://buy.stripe.com/fZedSBeiX1dufZebIW';
-                document.querySelector('.main-image').src = thumbnails[1].src;
-                buyNowLink.classList.add('disabled-link');
+                case 'na1v2':
+                productTitle.textContent = 'BL4CKOUT PLATE - North America V2';
+                soldout.textContent = 'PRE-ORDERS ONLY';
+                priceLabel.textContent = '$179 USD';
+                buyNowLink.href = 'https://buy.stripe.com/cN2aGp7Uz8FW9AQeVc';
+                document.querySelector('.main-image').src = thumbnails[0].src;
+                buyNowLink.classList.remove('disabled-link');
                 break;
-            case 'eu':
-                productTitle.textContent = 'BL4CKOUT PLATE - Europe';
-                soldout.textContent = 'SOLD OUT';
+            case 'na2':
+                productTitle.textContent = 'BL4CKOUT PLATE - North America Dual Pack V2';
+                soldout.textContent = 'PRE-ORDERS ONLY';
+                priceLabel.textContent = '$289 USD';
+                buyNowLink.href = 'https://buy.stripe.com/5kA4i10s73lCeVa6oH';
+                document.querySelector('.main-image').src = thumbnails[1].src;
+                buyNowLink.classList.remove('disabled-link');
+                break;
+            case 'eu1':
+                productTitle.textContent = 'BL4CKOUT PLATE - Europe V2';
+                soldout.textContent = 'PRE-ORDERS ONLY';
                 priceLabel.textContent = '$209 USD';
-                buyNowLink.href = 'https://buy.stripe.com/28o9CleiX9K000g5kx';
+                buyNowLink.href = 'https://buy.stripe.com/7sIdSBfn17BS8wM8wM';
                 document.querySelector('.main-image').src = thumbnails[2].src;
-                buyNowLink.classList.add('disabled-link');
+                buyNowLink.classList.remove('disabled-link');
+                break;
+                case 'eu2':
+                productTitle.textContent = 'BL4CKOUT PLATE - Europe V2';
+                soldout.textContent = 'PRE-ORDERS ONLY';
+                priceLabel.textContent = '$379 USD';
+                buyNowLink.href = 'https://buy.stripe.com/9AQg0J4In6xO5kA5kB';
+                document.querySelector('.main-image').src = thumbnails[2].src;
+                buyNowLink.classList.remove('disabled-link');
                 break;
             case 'usmoto':
-                productTitle.textContent = 'BL4CKOUT PLATE - Motorcycle';
-                soldout.textContent = 'SOLD OUT';
-                priceLabel.textContent = '$149 USD';
-                buyNowLink.href = 'https://buy.stripe.com/eVaeWF1wbbS85kAdQY';
+                productTitle.textContent = 'BL4CKOUT PLATE - Motorcycle V2';
+                soldout.textContent = 'PRE-ORDERS ONLY';
+                priceLabel.textContent = '$156 USD';
+                buyNowLink.href = 'https://buy.stripe.com/7sI3dXgr5cWcbIYfZd';
                 document.querySelector('.main-image').src = thumbnails[3].src;
-                buyNowLink.classList.add('disabled-link');
+                buyNowLink.classList.remove('disabled-link');
+                break;
+            case 'eumoto':
+                productTitle.textContent = 'BL4CKOUT PLATE - EU Motorcycle';
+                soldout.textContent = 'PRE-ORDERS ONLY';
+                priceLabel.textContent = '$189 USD';
+                buyNowLink.href = 'https://buy.stripe.com/3cs6q9caP9K04gw28t';
+                document.querySelector('.main-image').src = thumbnails[3].src;
+                buyNowLink.classList.remove('disabled-link');
+                break;
+            case 'aus':
+                productTitle.textContent = 'BL4CKOUT PLATE - Australia';
+                soldout.textContent = 'PRE-ORDERS ONLY';
+                priceLabel.textContent = '$208 USD';
+                buyNowLink.href = 'https://buy.stripe.com/6oE3dXeiX9K000g3cw';
+                document.querySelector('.main-image').src = thumbnails[3].src;
+                buyNowLink.classList.remove('disabled-link');
                 break;
             default:
                 soldout.textContent = '';
