@@ -8,24 +8,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/product.css" />
     <script src="js/script.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="stylesheet" href="css/terms.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="css/terms.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
     <script src="/blackoutplate/js/product.js"></script>
   </head>
     <!-- Google tag (gtag.js) -->
@@ -65,32 +53,48 @@
 
     <div class="container">
       <div class="gallery">
-        <img
-          src="images/BLK-US.png"
-          alt="Main Product Image"
-          class="main-image"
-        />
-        <div class="thumbnails">
-          <img src="images/BLK-US.png" alt="Thumbnail 1" class="thumb" />
-          <img src="images/BLK-US-DOUBLE.png" alt="Thumbnail 2" class="thumb" />
-          <img src="images/BLK-EU.png" alt="Thumbnail 3" class="thumb" />
-          <img src="images/BLK-moto.png" alt="Thumbnail 4" class="thumb" />
-          <!--<img src="images/Box.png" alt="Thumbnail 5" class="thumb" />-->
-        </div>
+          <img src="images/gallery/main-image.png" alt="Main Product Image" class="main-image"/>
+          <div class="thumbnails">
+              <img src="images/gallery/na-car.png" alt="Thumbnail 1" class="thumb" />
+              <!--<img src="images/gallery/na-car-double.png" alt="Thumbnail 2" class="thumb" /> -->
+              <img src="images/gallery/na-moto.png" alt="Thumbnail 3" class="thumb" />
+              <img src="images/gallery/eu-car.png" alt="Thumbnail 4" class="thumb" />
+              <!--<img src="images/gallery/eu-car-double.png" alt="Thumbnail 5" class="thumb" /> -->
+              <img src="images/gallery/eu-moto.png" alt="Thumbnail 6" class="thumb" />
+              <img src="images/gallery/aus-car.png" alt="Thumbnail 7" class="thumb" />
+          </div>
       </div>
+      <script>
+        // Gallery Main Image Switch
+        document.addEventListener('DOMContentLoaded', function () {
+          const mainImage = document.querySelector('.main-image');
+          const thumbnails = document.querySelectorAll('.thumb');
 
+          thumbnails.forEach(thumb => {
+              thumb.addEventListener('click', function () {
+                  mainImage.src = this.src; 
+                  mainImage.alt = this.alt; 
+              });
+          });
+        });
+      </script>
+      
       <div class="product-details">
-        <h1 id="product-name"></h1>
+        <h1 id="product-name">BL4CKOUT PLATE</h1>
         <p class="soldout" id="sold-out"></p>
-        <p class="price" id="product-price">$199.99 USD</p>
+        <p class="price" id="product-price">Starting at $156 USD</p>
         <p class="description" id="product-description">
-          Transform your vehicle’s appearance and privacy with the touch of a
-          button. With a simple remote control, switch from a transparent to a
-          solid black display to cover your license plate, ensuring privacy and
-          compliance at shows or private events.
         </p>
-        <h3>Select your size</h3>
+        <p style="color:#747474; font-size: 14px">
+          <i>
+            *V2 BL4CKOUT Plates Now Open for Preorders! Due to the rapid sell-out of our V1 series, we're offering preorders for V2 to ensure you don't miss out before they sell out. 
+            All preorders are fully refundable. Simply contact us for a refund before your item ships.
+          </i>
+          
+        </p>
         <!-- Enlever Sold out si en stock, et aller voir dans product.js-->
+        <!--
+        <h3>Select your size</h3>
         <select id="product-model" class="select-option">
           <option value="na1">
             Car - North America V1 (30 cm x 15 cm)
@@ -123,6 +127,7 @@
           <option value="acrylic" id="acrylic-option">Acrylic Shell</option>
           <option value="silicone" id="silicone-option">Silicone Shell</option>
         </select>
+        -->
 
         <br /><br />
         <div class="live-viewers">
@@ -130,7 +135,165 @@
           
         </div>
         <br />
-        <a href="#" class="buy-now" id="buy-now-link"  target="_blank">BUY NOW</a>
+        <!-- Trigger/Open The Modal -->
+        <button id="myBtn" class="buy-now">BUY NOW</button>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p style="color: rgb(255, 115, 115); text-align: center; margin-top: 65px; margin-left: auto; margin-right: auto; width: 100%; max-width: 700px;">
+              <b style="color: #f8f8f8;">Secure your BL4CKOUT Plate now!</b>
+              <br>
+              All preorders are fully refundable until shipment. Please contact us to cancel. Enjoy early access and flexible terms! Select your size below.
+          </p>          
+            <div class="modal-container">
+              <div class="column">
+                <h2 class="column-title"><img src="images/Na-flag.jpg">   North America</h2>
+                <!-- US CAR V1 -->
+                <a href="https://buy.stripe.com/3csbKtgr58FW8wMdQZ" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/us-car.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">30cm x 15cm</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(15, 175, 0);">AVAILABLE NOW</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships the next business day.</i></p>
+                        <p>Car V1- Single Kit</p>
+                        <p>$174USD</p>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- US CAR V2 -->
+                <a href="https://buy.stripe.com/cN2aGp7Uz8FW9AQeVc" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/us-car.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">30cm x 15cm</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(255, 115, 115);">PRE-ORDER ONLY</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships in 4 weeks.</i></p>
+                        <p>Car V2 - Single Kit</p>
+                        <p>$179USD</p>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- US CAR DUAL PACK -->
+                <a href="https://buy.stripe.com/5kA4i10s73lCeVa6oH" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/us-car-double.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">30cm x 15cm</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(255, 115, 115);">PRE-ORDER ONLY</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships in 3 weeks.</i></p>
+                        <p>Car - Dual Pack</p>
+                        <p>$289USD</p>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- US MOTORCYCLE -->
+                <a href="https://buy.stripe.com/7sI3dXgr5cWcbIYfZd" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/us-moto.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">7" x 4"</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(255, 115, 115);">PRE-ORDER ONLY</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships in 5 weeks.</i></p>
+                        <p>Motorcycle Plate</p>
+                        <p>$156USD</p>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+              <div class="column">
+                <h2 class="column-title"><img src="images/Eu-flag.png">   Europe</h2>
+                
+                <!-- EU CAR -->
+                <a href="https://buy.stripe.com/3cs6q95MrbS84gwbJ5" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/eu-car.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">52cm x 11cm</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(255, 115, 115);">PRE-ORDER ONLY</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships in 3 weeks.</i></p>
+                        <p>Car - Single Kit</p>
+                        <p>$218USD</p>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- EU CAR DUAL PACK -->
+                <a href="https://buy.stripe.com/eVa5m51wb3lCbIYbJ4" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/eu-car-double.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">52cm x 11cm</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(255, 115, 115);">PRE-ORDER ONLY</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships in 3 weeks.</i></p>
+                        <p>Car - Dual Pack</p>
+                        <p>$389USD</p>
+                    </div>
+                  </div>
+                </a>
+
+                <!-- EU MOTORCYCLE -->
+                <a href="https://buy.stripe.com/3cs6q9caP9K04gw28t" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/eu-moto.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">228mm x 178mm</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(255, 115, 115);">PRE-ORDER ONLY</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships in 4 weeks.</i></p>
+                        <p>Motorcycle Plate</p>
+                        <p>$189USD</p>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+              <div class="column" style="margin-bottom: 300px;">
+                <h2 class="column-title"><img src="images/AUS-flag.png">   Australia</h2>
+                <!-- AUS CAR -->
+                <a href="https://buy.stripe.com/6oE3dXeiX9K000g3cw" class="buy-links" target="_blank">
+                  <div class="product-card">
+                    <div class="product-image">
+                        <img src="images/buy-links/aus-car.png" alt="NA Motorcycle Plates">
+                        <p class="product-size">372mm x 134mm</p>
+                    </div>
+                    <div class="product-info">
+                        <p style="color: rgb(255, 115, 115);">PRE-ORDER ONLY</p>
+                        <p style="color: #a3a3a3; font-size: 12px"><i>Ships in 5 weeks.</i></p>
+                        <p>Car Plate</p>
+                        <p>$208USD</p>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- <a href="#" class="buy-now" id="buy-now-link"  target="_blank">BUY NOW</a> -->
         <img
           src="images/accepted-payments.jpg"
           alt="Accepted Payments"
@@ -143,8 +306,9 @@
         <h2>Product Specifications and Shipping Details</h2>
         <br />
         <p>
-          The BL4CKOUT Plate is available in multiple sizes to ensure a perfect
-          fit for various vehicle types. Each unit features a durable
+          Elevate your vehicle's aesthetics and privacy with a simple press of a button. Seamlessly transition your license plate from transparent to 
+          an opaque black display. Perfect for car shows or exclusive gatherings, this innovative feature enhances both your vehicle's style and discretion.
+          Each unit features a durable
           construction with a slight dark tint when transparent, providing
           privacy while maintaining visibility.
         </p>
@@ -154,17 +318,25 @@
             <strong>Sizes and Dimensions:</strong>
             <ul style="padding: 15px">
               <li>
-                North America Car Plates: 12" x 6" (30 cm x 15 cm) - fits most
-                US and Canadian vehicles (Silicone Shell Only)
+                NA Car Plates: <br>12" x 6" (30 cm x 15 cm)
               </li>
+              <br>
               <li>
-                European Car Plates: 20.5" x 4.4" (52 cm x 11 cm) - compatible
-                with standard EU plate sizes (Acrylic Shell Only)
+                NA Motorcycle Plates:  <br>7" x 4" (18 cm x 10 cm) 
               </li>
+              <br>
               <li>
-                Motorcycle Plates: 7" x 4" (18 cm x 10 cm) - designed for US
-                motorcycles(Acrylic Shell Only)
+                EU Car Plates: <br>20.5" x 4.4" (52 cm x 11 cm)
               </li>
+              <br>
+              <li>
+                EU Motorcycle Plates: <br>(228mm x 178mm)
+              </li>
+              <br>
+              <li>
+                Australia Car Plates: <br>(*372mm x 134mm)
+              </li>
+              <br>
             </ul>
             Clients are responsible for verifying that their license plate fits
             our product dimensions.
@@ -216,6 +388,7 @@
         </p>
       </div>
     </div>
+    <!-- Fake viewer count-->
     <script>
       function updateViewers() {
         const viewers = Math.floor(Math.random() * 10) + 8;
@@ -224,6 +397,48 @@
 
       updateViewers(); 
       setInterval(updateViewers, 5000);
+    </script>
+
+    <!-- Modal-->
+    <script>
+      // Animate product cards when modal is opened
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+      var modal = document.getElementById("myModal");
+      var btn = document.getElementById("myBtn");
+      var span = document.getElementsByClassName("close")[0];
+
+      btn.onclick = function() {
+        modal.style.display = "block";
+        document.body.style.overflow = 'hidden'; 
+      }
+
+      span.onclick = function() {
+        modal.style.display = "none";
+        document.body.style.overflow = 'auto'; 
+      }
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          document.body.style.overflow = 'auto'; 
+        }
+      }
     </script>
     
 

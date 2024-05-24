@@ -91,10 +91,13 @@ select {
     border-radius: 5px;
     text-align: center; 
     max-width: 100%;
+    border: none;
+    height: 50px;
 }
 
 .buy-now:hover {
     background-color: #0056b3;
+    cursor: pointer;
 }
 
 .disabled-link {
@@ -172,3 +175,146 @@ select {
         opacity: 1;
     }
 }
+
+
+/* Code for modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.95);
+}
+  
+.modal-content {
+    position: relative;
+    background-color: transparent;
+    margin: 3% auto;
+    padding: 0;
+    border: none;
+    width: 90%;
+    max-width: 1500px;
+    height: 95%;
+    overflow-y: auto;
+}
+  
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: #000;
+    cursor: pointer;
+}
+  
+.modal-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+  
+.column {
+    flex: 1;
+    margin: 0 10px;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+  
+.column-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+  
+@media screen and (max-width: 1000px) {
+    .modal-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .column-title, .product-card {
+        text-align: center;
+        width: 100%;
+    }
+
+}
+  
+.column-title img {
+    width: 50px;
+    height: auto;
+}
+
+.product-card {
+    background-color: #333;
+    color: white;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 250px;
+    min-width: 250px;
+    display: flex;
+    align-items: center;
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: slideUpFadeIn 1s ease-out forwards; 
+}
+
+@keyframes slideUpFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.product-image {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.product-image img {
+    width: 80px; 
+    height: auto; 
+}
+
+.product-image .product-size {
+    font-size: 12px; 
+    color: #ccc; 
+}
+
+.product-info {
+    text-align: left;
+    margin-left: 10px; 
+    flex-grow: 1;
+}
+
+.buy-links {
+    text-decoration: none;
+}
+
+.buy-links:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    
+}
+
+.product-card:hover {
+    background-color: #5e5e5e;
+}
+
+

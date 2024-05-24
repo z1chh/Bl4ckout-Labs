@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     var thumbnails = document.querySelectorAll('.thumb');
     var modelSelect = document.getElementById('product-model');
     var priceLabel = document.getElementById('product-price');
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var src = this.getAttribute('src');
         document.querySelector('.main-image').setAttribute('src', src);
     }
-
+    
     function updatePrice() {
         var selectedOption = modelSelect.value;
         // If one item is sold out, you have to:
@@ -127,4 +127,27 @@ document.querySelectorAll('.thumb').forEach(thumb => {
     thumb.addEventListener('click', (e) => {
         document.querySelector('.main-image').src = e.target.src;
     });
-});
+});*/
+
+
+// Close icon for modal
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("myBtn");
+
+var span = document.getElementsByClassName("close")[0];
+
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
