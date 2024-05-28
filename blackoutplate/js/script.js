@@ -180,6 +180,8 @@ function fadeInOrOutOnScroll(elementId) {
     fadeInOrOutOnScroll('img1');
     fadeInOrOutOnScroll('img2');
     fadeInOrOutOnScroll('img3');
+    fadeInOrOutOnScroll('img4');
+    fadeInOrOutOnScroll('img5');
   });
   
 // Buy Now Button appears after 110vh
