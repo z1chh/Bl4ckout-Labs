@@ -123,15 +123,40 @@ select {
     max-width: 1200px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 468px) {
     .container {
         flex-direction: column;
         align-items: center;
-
     }
 
     .gallery, .product-details {
         flex: 1 1 100%;
+    }
+    .gallery {
+        max-height: 370px;
+        margin-top: -60px;
+    }
+    .thumbnails {
+        max-height: 325px;
+        margin-top:-90px;
+    }
+    .thumbnails img {
+        background-color: rgba(255, 255, 255, 0.4);
+        padding: 2px;
+    }
+    .live-viewers {
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 668px) {
+    .gallery {
+        max-height: 470px;
+        margin-top: -10px;
+    }
+    .thumbnails {
+        max-height: 525px;
+        margin-top:-40px;
     }
 }
 
