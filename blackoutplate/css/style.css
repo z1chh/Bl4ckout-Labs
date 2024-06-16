@@ -63,7 +63,7 @@ nav {
 
 .nav-opaque {
     background: rgb(29, 29, 29); 
-    height: 55px;
+    height: 80px; /* Change here to 55px if we remove banner in product.html */
 }
 
 nav ul {

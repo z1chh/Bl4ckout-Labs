@@ -43,13 +43,19 @@
           </li>
           <li class="hover"><a href="product.html" target="_blank">BL4CKOUT PLATE</a></li>
       </ul>
+      <div class="banner" id="banner"> <!-- If you remove the banner, you have to go check out product.css/.banner class -->
+            <div class="scroll-text" id="scroll-text">
+                <i>Order yours before June 18th and we're randomly selecting three lucky winners to receive a full refund. Announced on June 20th.</i>
+            </div>
+          </div>
       <ul id="mainnav">
+          
           <li class="menu-icon navbar" onclick=showSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></button></li>
           <li class="invisible-spacer"></li>
           <li><a href="index.html"><img src="images/logo no background.png" style="width: 50px;"></a></li>
       </ul>
     </nav>
-
+    
     <div class="container">
       <div class="gallery">
           <img src="images/gallery/main-image.png" alt="Main Product Image" class="main-image"/>
@@ -400,7 +406,7 @@
     <!-- Fake viewer count-->
     <script>
       function updateViewers() {
-        const viewers = Math.floor(Math.random() * 10) + 25;
+        const viewers = Math.floor(Math.random() * 10) + 45;
         document.getElementById("viewers-count").textContent = viewers;
       }
     

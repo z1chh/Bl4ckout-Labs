@@ -305,7 +305,6 @@ select {
     }
 }
 
-
 .product-image {
     display: flex;
     flex-direction: column; 
@@ -340,6 +339,37 @@ select {
 
 .product-card:hover {
     background-color: #5e5e5e;
+}
+
+.banner {
+    width: 100%;
+    overflow: hidden;
+    background-color: #ff0000;
+    color: #fff;
+    padding: 3px 0;
+    text-align: center;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+    height: 25px; /* If you remove the banner, you have to go in style.css, find nav-opaque and change height */
+}
+
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: bold;
+    animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 
