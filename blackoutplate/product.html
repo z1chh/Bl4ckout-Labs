@@ -44,10 +44,52 @@
           <li class="hover"><a href="product.html" target="_blank">BL4CKOUT PLATE</a></li>
       </ul>
       <div class="banner" id="banner"> <!-- If you remove the banner, you have to go check out product.css/.banner class -->
-            <div class="scroll-text" id="scroll-text">
-                <i>Order yours before June 18th and we're randomly selecting three lucky winners to receive a full refund. Announced on June 20th.</i>
+        <div class="scroll-text" id="scroll-text">
+                <i>Order yours before June 18th to enter our GIVEAWAY! We're randomly selecting 3 lucky winners to receive a full refund. Announced on June 20th.</i>
             </div>
-          </div>
+          </div> 
+          <style>
+            .banner {
+              width: 100%;
+              overflow: hidden;
+              background-color: #ff0000;
+              color: #fff;
+              padding: 3px 0;
+              text-align: center;
+              position: relative;
+              visibility: visible;
+              opacity: 1;
+              transition: visibility 0s, opacity 0.5s linear;
+              height: 25px; /* If you remove the banner, you have to go in style.css, find nav-opaque and change height */
+          }
+          
+          .scroll-text {
+              display: inline-block;
+              white-space: nowrap;
+              font-size: 1rem;
+              font-weight: bold;
+              animation: scroll-left 30s linear infinite;
+          }
+          
+          @keyframes scroll-left {
+              0% {
+                  transform: translateX(100%);
+              }
+              100% {
+                  transform: translateX(-100%);
+              }
+          }
+          </style>
+          <script>
+            $(function() {
+              var $fixedBg = $('.fixed-background');
+            
+              $(window).on('scroll', function() {
+                var scrolled = $(window).scrollTop();
+                $fixedBg.css('background-position', 'center ' + (-scrolled) + 'px');
+              });
+            });
+          </script>   
       <ul id="mainnav">
           
           <li class="menu-icon navbar" onclick=showSidebar()><button class="svg"><svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" width="35"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" fill="white"/></svg></button></li>
@@ -160,7 +202,7 @@
                   </i>
                 </p>
                 <!-- US CAR V1 -->
-                <a href="https://buy.stripe.com/3csbKtgr58FW8wMdQZ" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/fZe6pz5Qkemtg2Q3cc" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/us-car.png" alt="">
@@ -176,7 +218,7 @@
                 </a>
 
                 <!-- US CAR V2 -->
-                <a href="https://buy.stripe.com/7sIaGp5Mr2hy4gwbJ9" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/4gw15f2E82DL4k8289" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/us-car.png" alt="">
@@ -192,7 +234,7 @@
                 </a>
 
                 <!-- US CAR DUAL PACK -->
-                <a href="https://buy.stripe.com/28o3dXfn12hyaEUcNf" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/8wM5lv7Ys7Y517WfZ0" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/us-car-double.png" alt="">
@@ -208,7 +250,7 @@
                 </a>
 
                 <!-- US MOTORCYCLE -->
-                <a href="https://buy.stripe.com/5kA9ClcaPcWcdR63cH" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/aEU6pz6Uo4LT03S6or" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/us-moto.png" alt="" style="width: 60px; margin: 10px;">
@@ -234,7 +276,7 @@
                 </p>
                 
                 <!-- EU CAR -->
-                <a href="https://buy.stripe.com/6oEbKtgr509qcN29B4" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/fZedS10w05PX17WcMQ" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/eu-car.png" alt="">
@@ -250,7 +292,7 @@
                 </a>
 
                 <!-- EU CAR DUAL PACK -->
-                <a href="https://buy.stripe.com/cN29Cl6Qv09q5kAaFb" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/4gw8xH5QkbahbMA149" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/eu-car-double.png" alt="">
@@ -266,7 +308,7 @@
                 </a>
 
                 <!-- EU MOTORCYCLE -->
-                <a href="https://buy.stripe.com/eVa8yh4Ing8o00g5kJ" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/14k01ba6A2DL6sg14a" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/eu-moto.png" alt="" style="width: 60px; margin: 10px;">
@@ -287,7 +329,7 @@
                 <div style="margin-bottom: 32px;"><h2 class="column-title"><img src="/blackoutplate/images/AUS-flag.PNG">   Australia</h2></div>
 
                 <!-- AUS CAR -->
-                <a href="https://buy.stripe.com/6oE29T1wbg8oaEUbJe" class="buy-links" target="_blank">
+                <a href="https://buy.stripe.com/fZe6pz5Qk7Y57wkcMT" class="buy-links" target="_blank">
                   <div class="product-card">
                     <div class="product-image">
                         <img src="/blackoutplate/images/Buy-links/aus-car.png" alt="">
