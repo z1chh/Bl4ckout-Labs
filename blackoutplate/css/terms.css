@@ -49,6 +49,11 @@ body {
     text-align: justify;
     max-width: 1200px;
 }
+
+.content h5 {
+    font-weight: 100;
+}
+
 .content.active {
     display: block;
 }
