@@ -49,17 +49,7 @@ body {
     }
   }
   
-/* Nav Bar CSS */
-nav {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    background: linear-gradient(to bottom, rgb(29, 29, 29) 0%, rgba(0, 0, 0, 0) 100%);
-    background-color: transparent;
-    transition: background-color 1.0s ease;
-}
+
 
 .nav-opaque {
     background: rgb(29, 29, 29); 
@@ -553,6 +543,11 @@ a:focus {
   background-color: #f7fafa;
   padding: 25px;
   border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.furniture_section .box:hover {
+  transform: scale(1.1);
 }
 
 .furniture_section .box .img-box {
